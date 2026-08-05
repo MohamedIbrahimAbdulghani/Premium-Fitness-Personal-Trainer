@@ -19,6 +19,10 @@
 
     <title>Coach Mahmoud Hamada | Premium Fitness & Personal Trainer</title>
 
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,1241 +34,739 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="bg-black text-light">
 
     <!-- Header Navigation -->
-    <header class="header" id="header">
-        <div class="container navbar-container">
-            <a href="#" class="logo">
-                <span>COACH</span> MAHMOUD
-            </a>
+    <header class="header sticky-top transition" id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark py-3">
+            <div class="container">
+                <a class="navbar-brand fw-black fs-3 logo" href="#">
+                    <span class="text-primary">COACH</span> MAHMOUD
+                </a>
 
-            <nav class="nav-menu" id="navMenu">
-                <a href="#home" class="nav-link active" id="nav-link-home" data-i18n="nav_home">Home</a>
-                <a href="#about" class="nav-link" id="nav-link-about" data-i18n="nav_about">About</a>
-                <a href="#transformations" class="nav-link" id="nav-link-transformations"
-                    data-i18n="nav_transformations">Transformations</a>
-                <a href="#services" class="nav-link" id="nav-link-services" data-i18n="nav_services">Services</a>
-                <a href="#pricing" class="nav-link" id="nav-link-pricing" data-i18n="nav_pricing">Pricing</a>
-                <a href="#faq" class="nav-link" id="nav-link-faq" data-i18n="nav_faq">FAQ</a>
-                <a href="#contact" class="nav-link btn btn-primary nav-cta" id="nav-link-contact"
-                    data-i18n="nav_cta">Start Now</a>
-            </nav>
-
-            <!-- Language Toggle Button -->
-            <button class="lang-toggle-btn" id="langToggleBtn" aria-label="Switch to Arabic">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                    <path
-                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                    </path>
-                </svg>
-                <span class="lang-label">ع</span>
-            </button>
-
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-bg-glow"></div>
-        <div class="hero-bg-glow-2"></div>
-        <div class="container hero-container">
-            <div class="hero-content reveal fade-left">
-                <div class="badge-premium">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        class="icon-star">
-                        <polygon
-                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                        </polygon>
-                    </svg>
-                    <span data-i18n="badge_premium">PREMIUM PERSONAL COACHING</span>
-                </div>
-                <h1 class="hero-title">
-                    <span class="hero-title-top" data-i18n="hero_title_top">SHAPE YOUR</span>
-                    <span class="highlight" data-i18n="hero_title_main">ULTIMATE</span> <span
-                        data-i18n="hero_title_highlight">PHYSIQUE</span>
-                </h1>
-                <p class="hero-subtitle">
-                    <span data-i18n="hero_subtitle">Achieve sustainable, life-changing results with science-backed
-                        customized training programs, tailored nutrition plans, and 1-on-1 daily accountability.</span>
-                </p>
-
-                <!-- Quick Value Proposition Checklist -->
-                <ul class="hero-benefits">
-                    <li>
-                        <svg class="benefit-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="3">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                        <span data-i18n="hero_benefit_1">Science-Backed Workout Protocols</span>
-                    </li>
-                    <li>
-                        <svg class="benefit-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="3">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                        100% Tailored Meals & Custom Dieting
-                    </li>
-                    <li>
-                        <svg class="benefit-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="3">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                        <span data-i18n="hero_benefit_3">Daily 1-on-1 WhatsApp Coaching</span>
-                    </li>
-                </ul>
-
-                <div class="hero-ctas">
-                    <a href="#contact" class="btn btn-primary btn-large btn-ripple" id="hero-cta-start"
-                        data-i18n="hero_cta_start">Start Your Transformation</a>
-                    <a href="#pricing" class="btn btn-secondary btn-large" id="hero-cta-packages"
-                        data-i18n="hero_cta_packages">View Packages</a>
-                </div>
-            </div>
-
-            <div class="hero-visual reveal fade-right">
-                <!-- Background visual decorators -->
-                <div class="hero-decor-circle"></div>
-                <div class="hero-decor-grid"></div>
-
-                <div class="hero-img-wrapper">
-                    <div class="hero-img-border"></div>
-                    <img src="assets/images/cotch1.jpg" alt="Coach Mahmoud Hamada" class="hero-img" loading="eager">
-                </div>
-
-                <!-- Floating Info Cards -->
-                <div class="floating-card float-1">
-                    <div class="float-icon">
+                <div class="d-flex align-items-center order-lg-3 gap-3">
+                    <!-- Language Toggle Button -->
+                    <button class="btn btn-outline-light lang-toggle-btn d-flex align-items-center gap-2 border-0" id="langToggleBtn"
+                        aria-label="Switch to Arabic">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                            </polygon>
-                        </svg>
-                    </div>
-                    <div>
-                        <h4 data-i18n="hero_float_cert">ISSA Certified</h4>
-                        <p data-i18n="hero_float_cert_sub">Elite Personal Trainer</p>
-                    </div>
-                </div>
-                <div class="floating-card float-2">
-                    <div class="float-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                        </svg>
-                    </div>
-                    <div>
-                        <h4 data-i18n="hero_float_clients">500+ Clients</h4>
-                        <p data-i18n="hero_float_clients_sub">Real Transformations</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Scroll Down Indicator -->
-        <a href="#stats" class="hero-scroll-down" aria-label="Scroll down">
-            <span class="scroll-text" data-i18n="hero_scroll">Scroll</span>
-            <div class="scroll-arrow">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-            </div>
-        </a>
-    </section>
-
-    <!-- Statistics Section -->
-    <section class="stats" id="stats">
-        <div class="container stats-container">
-            <div class="stats-grid">
-                <div class="stat-card reveal zoom-in">
-                    <div class="stat-icon-wrapper">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
                         </svg>
-                    </div>
-                    <div class="stat-number" data-target="8">0</div>
-                    <div class="stat-label" data-i18n="stat_years">Years Experience</div>
+                        <span class="lang-label fw-bold">ع</span>
+                    </button>
+
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
 
-                <div class="stat-card reveal zoom-in" data-delay="100">
-                    <div class="stat-icon-wrapper">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <div class="stat-number" data-target="500">0</div>
-                    <div class="stat-label" data-i18n="stat_clients">Clients Trained</div>
+                <div class="collapse navbar-collapse justify-content-center order-lg-2" id="navbarNav">
+                    <ul class="navbar-nav gap-lg-4 mt-3 mt-lg-0 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active fw-medium" aria-current="page" href="#home"
+                                data-i18n="nav_home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#about" data-i18n="nav_about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#transformations"
+                                data-i18n="nav_transformations">Transformations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#services" data-i18n="nav_services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#pricing" data-i18n="nav_pricing">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#faq" data-i18n="nav_faq">FAQ</a>
+                        </li>
+                        <li class="nav-item d-lg-none mt-2">
+                            <a href="#contact" class="btn btn-primary px-4 py-2 w-100" data-i18n="nav_cta">Start Now</a>
+                        </li>
+                    </ul>
                 </div>
-
-                <div class="stat-card reveal zoom-in" data-delay="200">
-                    <div class="stat-icon-wrapper">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                            </polygon>
-                        </svg>
-                    </div>
-                    <div class="stat-number" data-target="98">0</div>
-                    <div class="stat-label" data-i18n="stat_success">Success Rate (%)</div>
-                </div>
-
-                <div class="stat-card reveal zoom-in" data-delay="300">
-                    <div class="stat-icon-wrapper">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                    </div>
-                    <div class="stat-number" data-target="12">0</div>
-                    <div class="stat-label" data-i18n="stat_certs">Certifications</div>
+                
+                <div class="d-none d-lg-block order-lg-4 ms-3">
+                    <a href="#contact" class="btn btn-primary px-4 py-2 rounded-pill fw-bold shadow-neon" data-i18n="nav_cta">Start Now</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header reveal fade-up">
-                <span class="section-tagline" data-i18n="about_tagline">Meet Your Coach</span>
-                <h2 class="section-title" data-i18n="about_title">About Coach Mahmoud Hamada</h2>
-                <div class="section-divider"></div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section min-vh-100 d-flex align-items-center position-relative overflow-hidden pt-5" id="home">
+            <div class="hero-bg-glow position-absolute"></div>
+            <div class="container position-relative z-2">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-6 hero-content text-center text-lg-start">
+                        <div class="badge-premium mb-3 d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" class="text-primary">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <span class="text-uppercase fw-bold small ls-1" data-i18n="badge_premium">PREMIUM PERSONAL
+                                COACHING</span>
+                        </div>
+                        <h1 class="display-1 fw-black mb-3 hero-title lh-1">
+                            <span class="d-block text-white opacity-75 small fw-bold mb-2"
+                                data-i18n="hero_title_top">SHAPE YOUR</span>
+                            <span class="text-primary italic" data-i18n="hero_title_main">ULTIMATE</span>
+                            <span class="d-block text-white" data-i18n="hero_title_highlight">PHYSIQUE</span>
+                        </h1>
+                        <p class="lead text-secondary-emphasis mb-4 pe-lg-5" data-i18n="hero_subtitle">
+                            Achieve sustainable, life-changing results with science-backed customized training programs,
+                            tailored nutrition plans, and 1-on-1 daily accountability.
+                        </p>
+
+                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                            <a href="#contact" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-black shadow-neon transition-slow"
+                                data-i18n="hero_cta_start">Start Your Transformation</a>
+                            <a href="#pricing" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill fw-bold transition"
+                                data-i18n="hero_cta_packages">View Packages</a>
+                        </div>
+
+                        <!-- Stats Row Desktop -->
+                        <div class="row mt-5 g-4 d-none d-lg-flex">
+                            <div class="col-4">
+                                <div class="stat-mini">
+                                    <h3 class="fw-black text-white mb-0 fs-2"><span class="stat-number" data-target="8">0</span>+</h3>
+                                    <p class="small text-muted text-uppercase fw-bold m-0" data-i18n="stat_years">Years Exp</p>
+                                </div>
+                            </div>
+                            <div class="col-4 border-start border-white border-opacity-10">
+                                <div class="stat-mini ms-3">
+                                    <h3 class="fw-black text-white mb-0 fs-2"><span class="stat-number" data-target="500">0</span>+</h3>
+                                    <p class="small text-muted text-uppercase fw-bold m-0" data-i18n="stat_clients">Clients</p>
+                                </div>
+                            </div>
+                            <div class="col-4 border-start border-white border-opacity-10">
+                                <div class="stat-mini ms-3">
+                                    <h3 class="fw-black text-white mb-0 fs-2"><span class="stat-number" data-target="12">0</span>+</h3>
+                                    <p class="small text-muted text-uppercase fw-bold m-0" data-i18n="stat_certs">Certs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 hero-visual-container position-relative">
+                        <div class="hero-visual position-relative mx-auto ms-lg-auto">
+                            <!-- Background elements -->
+                            <div class="hero-shape-1"></div>
+                            <div class="hero-shape-2"></div>
+                            
+                            <div class="hero-img-box overflow-hidden rounded-4 shadow-lg border border-white border-opacity-10">
+                                <img src="assets/images/cotch1.jpg" alt="Coach Mahmoud Hamada" class="img-fluid hero-img"
+                                    loading="eager">
+                            </div>
+
+                            <!-- Floating Cards -->
+                            <div class="floating-card-new float-top-right d-none d-md-flex align-items-center gap-3 glassmorphism p-3 rounded-4 border border-white border-opacity-10 shadow-lg">
+                                <div class="icon-box-p bg-primary rounded-circle p-2 text-black">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h6 class="text-white fw-bold mb-0 small" data-i18n="hero_float_cert">ISSA Certified</h6>
+                                    <p class="text-muted mb-0 smallest" data-i18n="hero_float_cert_sub">Elite Trainer</p>
+                                </div>
+                            </div>
+
+                            <div class="floating-card-new float-bottom-left d-none d-md-flex align-items-center gap-3 glassmorphism p-3 rounded-4 border border-white border-opacity-10 shadow-lg">
+                                <div class="icon-box-p bg-primary rounded-circle p-2 text-black">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h6 class="text-white fw-bold mb-0 small" data-i18n="hero_float_clients">Real Results</h6>
+                                    <p class="text-muted mb-0 smallest" data-i18n="hero_float_clients_sub">500+ Transformations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4 d-none d-lg-block">
+                <a href="#about" class="text-decoration-none text-white opacity-50 hero-scroll-btn transition">
+                    <span class="d-block small text-uppercase fw-bold mb-2 ls-1" data-i18n="hero_scroll">Scroll</span>
+                    <div class="scroll-mouse border border-white mx-auto rounded-pill position-relative">
+                        <div class="scroll-wheel bg-white position-absolute start-50 translate-middle-x"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
 
-            <div class="about-grid">
-                <div class="about-info reveal fade-left">
-                    <h3 class="about-subtitle" data-i18n="about_subtitle">Empowering You To Achieve Peak Performance
-                    </h3>
-                    <p class="about-text">
-                        I am Coach Mahmoud Hamada, a certified fitness specialist, bodybuilding professional, and sports
-                        nutrition expert with over 8 years of active industry experience. My coaching philosophy
-                        revolves around a simple yet powerful fact: <strong>there is no one-size-fits-all training
-                            protocol.</strong>
-                    </p>
-                    <p class="about-text">
-                        Every individual holds unique biometrics, work schedules, metabolic rates, and personal limits.
-                        I combine modern sports science with strict accountability to build a lifestyle that yields
-                        lasting physical change—without leaving you starving or chronically fatigued.
-                    </p>
+        <!-- Stats Section Mobile Only -->
+        <section class="d-lg-none py-5 border-top border-white border-opacity-10">
+            <div class="container">
+                <div class="row g-4 text-center">
+                    <div class="col-4">
+                        <h4 class="fw-black text-primary mb-0"><span class="stat-number" data-target="8">0</span>+</h4>
+                        <p class="smallest text-muted text-uppercase fw-bold m-0" data-i18n="stat_years">Years</p>
+                    </div>
+                    <div class="col-4">
+                        <h4 class="fw-black text-primary mb-0"><span class="stat-number" data-target="500">0</span>+</h4>
+                        <p class="smallest text-muted text-uppercase fw-bold m-0" data-i18n="stat_clients">Clients</p>
+                    </div>
+                    <div class="col-4">
+                        <h4 class="fw-black text-primary mb-0"><span class="stat-number" data-target="12">0</span>+</h4>
+                        <p class="smallest text-muted text-uppercase fw-bold m-0" data-i18n="stat_certs">Certs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="specialization-list">
-                        <div class="spec-item">
-                            <span class="spec-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
+        <!-- About Section -->
+        <section class="about-section py-section position-relative" id="about">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-5 order-lg-2">
+                        <div class="about-img-container position-relative">
+                            <div class="about-img-bg glassmorphism rounded-4 position-absolute shadow-lg"></div>
+                            <img src="assets/images/hero_trainer.png" alt="Mahmoud Hamada Workout" class="img-fluid rounded-4 position-relative z-1 shadow-neon-soft grayscale-hover transition-slow">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 order-lg-1">
+                        <div class="section-header mb-5 reveal fade-up">
+                            <span class="text-primary fw-bold text-uppercase ls-2 small d-block mb-2" data-i18n="about_tagline">Meet Your Coach</span>
+                            <h2 class="display-4 fw-black text-white lh-1 mb-4" data-i18n="about_title">About Mahmoud Hamada</h2>
+                            <div class="bg-primary rounded-pill mb-4" style="height: 4px; width: 80px;"></div>
+                        </div>
+                        
+                        <div class="reveal fade-up" data-delay="100">
+                            <h3 class="h4 fw-bold text-white mb-3" data-i18n="about_subtitle">Empowering You To Achieve Peak Performance</h3>
+                            <div class="about-text-content opacity-75 lead mb-4">
+                                <p data-i18n="about_p1">I am Coach Mahmoud Hamada, a certified fitness specialist, bodybuilding professional, and sports nutrition expert with over 8 years of active industry experience.</p>
+                                <p data-i18n="about_p2">Every individual holds unique biometrics, work schedules, and goals. I combine modern sports science with strict accountability to build a lifestyle that yields lasting physical change.</p>
+                            </div>
+
+                            <div class="row g-4 mt-2">
+                                <div class="col-md-6">
+                                    <div class="d-flex gap-3">
+                                        <div class="icon-box-m bg-primary rounded-3 p-2 text-black h-fit">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                <path d="M6.5 6.5h11M6.5 12h11M6.5 17.5h11"></path>
+                                                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h5 class="text-white fw-bold small mb-1" data-i18n="spec_1_title">Workout Architecture</h5>
+                                            <p class="small text-muted mb-0" data-i18n="spec_1_desc">Custom programs modeled around your posture and targets.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex gap-3">
+                                        <div class="icon-box-m bg-primary rounded-3 p-2 text-black h-fit">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h5 class="text-white fw-bold small mb-1" data-i18n="spec_2_title">Nutrition Planning</h5>
+                                            <p class="small text-muted mb-0" data-i18n="spec_2_desc">Flexible dieting tailored to your preferences.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Showcase -->
+        <section class="py-section bg-darker-1" id="certificates">
+            <div class="container">
+                <div class="text-center mb-5 reveal fade-up">
+                    <span class="text-primary fw-bold text-uppercase ls-2 small" data-i18n="cert_tagline">Academic Background</span>
+                    <h2 class="display-5 fw-black text-white mt-2" data-i18n="cert_title">Credentials</h2>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-5 col-lg-4">
+                        <div class="certificate-card-new glassmorphism rounded-4 overflow-hidden border border-white border-opacity-10 position-relative group reveal zoom-in" data-img="assets/images/certificate_1.png">
+                            <div class="cert-img-box ratio ratio-4x3">
+                                <img src="assets/images/certificate_1.png" alt="ISSA CPT" class="object-fit-cover transition-slow group-hover-scale">
+                            </div>
+                            <div class="cert-info-box p-4">
+                                <h4 class="h5 text-white fw-bold mb-1" data-i18n="cert_1_title">Certified Personal Trainer (CPT)</h4>
+                                <p class="small text-primary fw-bold mb-0" data-i18n="cert_1_issuer">ISSA International</p>
+                            </div>
+                            <div class="cert-overlay-new position-absolute inset-0 d-flex align-items-center justify-content-center opacity-0 transition group-hover-opacity-100 bg-black bg-opacity-75">
+                                <span class="btn btn-outline-primary rounded-pill px-4" data-i18n="cert_expand">Expand View</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-lg-4">
+                        <div class="certificate-card-new glassmorphism rounded-4 overflow-hidden border border-white border-opacity-10 position-relative group reveal zoom-in" data-delay="150" data-img="assets/images/certificate_2.png">
+                            <div class="cert-img-box ratio ratio-4x3">
+                                <img src="assets/images/certificate_2.png" alt="ISSA SNS" class="object-fit-cover transition-slow group-hover-scale">
+                            </div>
+                            <div class="cert-info-box p-4">
+                                <h4 class="h5 text-white fw-bold mb-1" data-i18n="cert_2_title">Sports Nutritionist (SNS)</h4>
+                                <p class="small text-primary fw-bold mb-0" data-i18n="cert_2_issuer">ISSA International</p>
+                            </div>
+                            <div class="cert-overlay-new position-absolute inset-0 d-flex align-items-center justify-content-center opacity-0 transition group-hover-opacity-100 bg-black bg-opacity-75">
+                                <span class="btn btn-outline-primary rounded-pill px-4" data-i18n="cert_expand">Expand View</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transformations -->
+        <section class="py-section" id="transformations">
+            <div class="container">
+                <div class="row align-items-end mb-5 reveal fade-up">
+                    <div class="col-md-8">
+                        <span class="text-primary fw-bold text-uppercase ls-2 small d-block mb-2" data-i18n="trans_tagline">Real Proof</span>
+                        <h2 class="display-4 fw-black text-white lh-1" data-i18n="trans_title">Success Stories</h2>
+                    </div>
+                    <div class="col-md-4 text-md-end mt-3">
+                        <a href="#contact" class="btn btn-link text-white text-decoration-none fw-bold p-0 group">
+                            Start Your Story <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="ms-1 transition group-hover-translate-x-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="trans-card-new glassmorphism rounded-4 overflow-hidden border border-white border-opacity-10 reveal fade-left">
+                            <div class="row g-0">
+                                <div class="col-sm-5 trans-img-side position-relative cursor-pointer" data-img="assets/images/transformation_1.png">
+                                    <img src="assets/images/transformation_1.png" alt="Transformation Ahmed" class="img-fluid h-100 object-fit-cover grayscale-hover transition-slow">
+                                    <div class="trans-zoom-badge position-absolute top-2 end-2 bg-black bg-opacity-50 p-2 rounded-circle">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                    </div>
+                                </div>
+                                <div class="col-sm-7 p-4 p-md-5 d-flex flex-column justify-content-center">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span class="badge bg-primary text-black fw-black rounded-pill py-2 px-3" data-i18n="trans_1_tag">Fat Loss</span>
+                                        <span class="small text-muted fw-bold" data-i18n="trans_1_duration">12 Weeks</span>
+                                    </div>
+                                    <h3 class="h3 fw-black text-white mb-3" data-i18n="trans_1_name">Ahmed's Journey</h3>
+                                    <p class="text-secondary-emphasis small mb-4" data-i18n="trans_1_desc pe-lg-4">Ahmed reduced body fat from 24% to 11% while gaining solid lean mass.</p>
+                                    <div class="d-flex gap-4">
+                                        <div class="metric">
+                                            <span class="d-block smallest text-muted text-uppercase fw-bold ls-1">Weight</span>
+                                            <span class="text-primary fw-black fs-4">-14kg</span>
+                                        </div>
+                                        <div class="metric border-start border-white border-opacity-10 ps-4">
+                                            <span class="d-block smallest text-muted text-uppercase fw-bold ls-1">Muscle</span>
+                                            <span class="text-primary fw-black fs-4">+3.2kg</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="trans-card-new glassmorphism rounded-4 overflow-hidden border border-white border-opacity-10 reveal fade-right" data-delay="200">
+                            <div class="row g-0">
+                                <div class="col-sm-5 trans-img-side position-relative cursor-pointer" data-img="assets/images/transformation_2.png">
+                                    <img src="assets/images/transformation_2.png" alt="Transformation Sarah" class="img-fluid h-100 object-fit-cover grayscale-hover transition-slow">
+                                    <div class="trans-zoom-badge position-absolute top-2 end-2 bg-black bg-opacity-50 p-2 rounded-circle">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                    </div>
+                                </div>
+                                <div class="col-sm-7 p-4 p-md-5 d-flex flex-column justify-content-center">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span class="badge bg-primary text-black fw-black rounded-pill py-2 px-3" data-i18n="trans_2_tag">Recomposition</span>
+                                        <span class="small text-muted fw-bold" data-i18n="trans_2_duration">16 Weeks</span>
+                                    </div>
+                                    <h3 class="h3 fw-black text-white mb-3" data-i18n="trans_2_name">Sarah's Transformation</h3>
+                                    <p class="text-secondary-emphasis small mb-4" data-i18n="trans_2_desc pe-lg-4">Sarah completely reshaped her posture and sculpted her core definition.</p>
+                                    <div class="d-flex gap-4">
+                                        <div class="metric">
+                                            <span class="d-block smallest text-muted text-uppercase fw-bold ls-1">Weight</span>
+                                            <span class="text-primary fw-black fs-4">-8.5kg</span>
+                                        </div>
+                                        <div class="metric border-start border-white border-opacity-10 ps-4">
+                                            <span class="d-block smallest text-muted text-uppercase fw-bold ls-1">Body Fat</span>
+                                            <span class="text-primary fw-black fs-4">-12.5%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="py-section bg-darker-2" id="services">
+            <div class="container">
+                <div class="text-center mb-5 reveal fade-up">
+                    <span class="text-primary fw-bold text-uppercase ls-2 small" data-i18n="services_tagline">How We Work</span>
+                    <h2 class="display-5 fw-black text-white mt-2" data-i18n="services_title">Coaching Architecture</h2>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="service-card-new p-5 rounded-4 border border-white border-opacity-10 transition h-100 reveal fade-up">
+                            <div class="icon-box-l bg-primary text-black rounded-3 p-3 d-inline-block mb-4 shadow-neon-soft">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                     <path d="M6.5 6.5h11M6.5 12h11M6.5 17.5h11"></path>
                                     <rect x="3" y="3" width="18" height="18" rx="2"></rect>
                                 </svg>
-                            </span>
-                            <div>
-                                <h4 data-i18n="spec_1_title">Tailored Workout Architecture</h4>
-                                <p data-i18n="spec_1_desc">Custom programs modeled around your posture, strengths, and
-                                    goals.</p>
                             </div>
+                            <h4 class="h4 fw-black text-white mb-3" data-i18n="svc_1_title">Bespoke Workouts</h4>
+                            <p class="text-secondary-emphasis" data-i18n="svc_1_desc">Dynamic routines mapped based on your biomechanics and targets.</p>
                         </div>
-                        <div class="spec-item">
-                            <span class="spec-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card-new p-5 rounded-4 border border-white border-opacity-10 transition h-100 reveal fade-up" data-delay="100">
+                            <div class="icon-box-l bg-primary text-black rounded-3 p-3 d-inline-block mb-4 shadow-neon-soft">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                     <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                                 </svg>
-                            </span>
-                            <div>
-                                <h4>Advanced Nutrition & Macro Planning</h4>
-                                <p data-i18n="spec_2_desc">Flexible dieting plans tailored to your food preferences and
-                                    metabolism.</p>
+                            </div>
+                            <h4 class="h4 fw-black text-white mb-3" data-i18n="svc_2_title">Macro Architecture</h4>
+                            <p class="text-secondary-emphasis" data-i18n="svc_2_desc">Science-backed meal planning designed around foods you enjoy.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card-new p-5 rounded-4 border border-white border-opacity-10 transition h-100 reveal fade-up" data-delay="200">
+                            <div class="icon-box-l bg-primary text-black rounded-3 p-3 d-inline-block mb-4 shadow-neon-soft">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <h4 class="h4 fw-black text-white mb-3" data-i18n="svc_3_title">Direct Accountability</h4>
+                            <p class="text-secondary-emphasis" data-i18n="svc_3_desc">Daily direct communication to track progress and handle weekly edits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="py-section position-relative overflow-hidden" id="pricing">
+            <div class="pricing-bg-glow position-absolute"></div>
+            <div class="container position-relative z-1">
+                <div class="text-center mb-5 reveal fade-up">
+                    <span class="text-primary fw-bold text-uppercase ls-2 small" data-i18n="pricing_tagline">Invest In Yourself</span>
+                    <h2 class="display-4 fw-black text-white mt-2" data-i18n="pricing_title">Coaching Programs</h2>
+                </div>
+
+                <div class="row g-4 align-items-center">
+                    <!-- Basic -->
+                    <div class="col-lg-4">
+                        <div class="price-card-new glassmorphism p-5 rounded-4 border border-white border-opacity-10 reveal fade-up">
+                            <h4 class="fw-bold text-white mb-2" data-i18n="pkg_basic_name">Basic</h4>
+                            <div class="d-flex align-items-baseline mb-3">
+                                <span class="display-4 fw-black text-white">$59</span>
+                                <span class="text-muted ms-1 fw-bold" data-i18n="pkg_basic_period">/mo</span>
+                            </div>
+                            <p class="small text-secondary-emphasis mb-4 pe-lg-3" data-i18n="pkg_basic_desc">Perfect for self-motivated individuals needing structure.</p>
+                            <hr class="border-white border-opacity-10 mb-4">
+                            <ul class="list-unstyled d-flex flex-column gap-3 mb-5">
+                                <li class="d-flex align-items-center gap-3 small">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-primary"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    <span data-i18n="feature_workout">Custom Workout Program</span>
+                                </li>
+                                <li class="d-flex align-items-center gap-3 small">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-primary"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    <span data-i18n="feature_nutrition">Personalized Nutrition</span>
+                                </li>
+                                <li class="d-flex align-items-center gap-3 small opacity-50">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-muted"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                    <span data-i18n="feature_whatsapp">WhatsApp Support</span>
+                                </li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-light w-100 rounded-pill py-3 fw-black select-pkg-btn" data-package="Basic Transformation" data-i18n="btn_select">Select Plan</a>
+                        </div>
+                    </div>
+
+                    <!-- Elite (Popular) -->
+                    <div class="col-lg-4">
+                        <div class="price-card-new bg-primary p-5 rounded-4 border-0 position-relative shadow-neon reveal zoom-in overflow-hidden">
+                            <div class="popular-ribbon-new position-absolute bg-black text-white px-4 py-1 text-uppercase fw-black smallest ls-1" data-i18n="price_ribbon">RECOMMENDED</div>
+                            <h4 class="fw-black text-black mb-2" data-i18n="pkg_elite_name">Elite Coaching</h4>
+                            <div class="d-flex align-items-baseline mb-3">
+                                <span class="display-3 fw-black text-black">$99</span>
+                                <span class="text-black text-opacity-75 ms-1 fw-bold" data-i18n="pkg_elite_period">/mo</span>
+                            </div>
+                            <p class="small text-black text-opacity-75 mb-4 pe-lg-3" data-i18n="pkg_elite_desc">Our flagship model targeting dramatic recomposition.</p>
+                            <hr class="border-black border-opacity-10 mb-4">
+                            <ul class="list-unstyled d-flex flex-column gap-3 mb-5">
+                                <li class="d-flex align-items-center gap-3 small fw-bold text-black">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    <span data-i18n="feature_daily">Daily Progress Charting</span>
+                                </li>
+                                <li class="d-flex align-items-center gap-3 small fw-bold text-black">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    <span data-i18n="feature_whatsapp">Daily WhatsApp Support</span>
+                                </li>
+                                <li class="d-flex align-items-center gap-3 small fw-bold text-black">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    <span data-i18n="feature_video">Video Form Review</span>
+                                </li>
+                            </ul>
+                            <a href="#contact" class="btn btn-black w-100 rounded-pill py-3 fw-black select-pkg-btn" data-package="Elite Coaching" data-i18n="btn_get_started">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- VIP -->
+                    <div class="col-lg-4">
+                        <div class="price-card-new glassmorphism p-5 rounded-4 border border-white border-opacity-10 reveal fade-up">
+                            <h4 class="fw-bold text-white mb-2" data-i18n="pkg_vip_name">VIP Access</h4>
+                            <div class="d-flex align-items-baseline mb-3">
+                                <span class="display-4 fw-black text-white">$189</span>
+                                <span class="text-muted ms-1 fw-bold" data-i18n="pkg_vip_period">/mo</span>
+                            </div>
+                            <p class="small text-secondary-emphasis mb-4 pe-lg-3" data-i18n="pkg_vip_desc">Full priority integration for maximum support.</p>
+                            <hr class="border-white border-opacity-10 mb-4">
+                            <ul class="list-unstyled d-flex flex-column gap-3 mb-5">
+                                <li class="d-flex align-items-center gap-3 small">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-primary"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    <span data-i18n="feature_unlimited">Unlimited Video Analysis</span>
+                                </li>
+                                <li class="d-flex align-items-center gap-3 small">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-primary"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    <span data-i18n="feature_phone">Direct Phone Access</span>
+                                </li>
+                                <li class="d-flex align-items-center gap-3 small">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-primary"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    <span data-i18n="feature_strategy">Weekly Strategy Call</span>
+                                </li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-light w-100 rounded-pill py-3 fw-black select-pkg-btn" data-package="VIP Ultimate Access" data-i18n="btn_unlock_vip">Unlock VIP</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-section bg-darker-1" id="faq">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-5 mb-lg-0 reveal fade-left">
+                        <span class="text-primary fw-bold text-uppercase ls-2 small d-block mb-2" data-i18n="faq_tagline">Clear Answers</span>
+                        <h2 class="display-5 fw-black text-white lh-1" data-i18n="faq_title">FAQ</h2>
+                        <p class="text-muted mt-4 pe-lg-4">Everything you need to know about starting your transformation journey with Coach Mahmoud.</p>
+                    </div>
+                    <div class="col-lg-8 reveal fade-right" data-delay="200">
+                        <div class="accordion accordion-flush custom-accordion" id="faqAccordion">
+                            <div class="accordion-item glassmorphism rounded-4 mb-3 border border-white border-opacity-10 overflow-hidden">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed py-4 px-4 bg-transparent text-white fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" data-i18n="faq_1_q">
+                                        How fast will I receive my custom plans?
+                                    </button>
+                                </h2>
+                                <div id="faq-1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body px-4 pb-4 pt-0 text-secondary-emphasis" data-i18n="faq_1_a">
+                                        Your personalized blueprints will be delivered directly to your WhatsApp dashboard within 48 to 72 hours of complete enrollment.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item glassmorphism rounded-4 mb-3 border border-white border-opacity-10 overflow-hidden">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed py-4 px-4 bg-transparent text-white fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" data-i18n="faq_2_q">
+                                        Can I train with a home setup?
+                                    </button>
+                                </h2>
+                                <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body px-4 pb-4 pt-0 text-secondary-emphasis" data-i18n="faq_2_a">
+                                        Yes. Every training plan is built around the equipment you have available, including home-specific mechanical tension optimizations.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item glassmorphism rounded-4 mb-3 border border-white border-opacity-10 overflow-hidden">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed py-4 px-4 bg-transparent text-white fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" data-i18n="faq_3_q">
+                                        What if I dislike certain foods?
+                                    </button>
+                                </h2>
+                                <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body px-4 pb-4 pt-0 text-secondary-emphasis" data-i18n="faq_3_a">
+                                        I follow a flexible dieting method. Your meal plan is built to only contain foods you enjoy, ensuring sustainability.
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="about-specialties reveal fade-right">
-                    <div class="specialty-card">
-                        <div class="specialty-icon-box">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M6.5 6.5h11M6.5 12h11M6.5 17.5h11"></path>
-                                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                            </svg>
+        <!-- Contact Section -->
+        <section class="py-section bg-black position-relative" id="contact">
+            <div class="contact-glow position-absolute"></div>
+            <div class="container position-relative z-1">
+                <div class="row gy-5 align-items-center">
+                    <div class="col-lg-5 reveal fade-left">
+                        <div class="badge-premium mb-3 d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill">
+                            <span class="text-uppercase fw-bold small ls-1 text-primary" data-i18n="contact_badge">START TODAY</span>
                         </div>
-                        <h4>Fat Loss & Shredding</h4>
-                        <p data-i18n="specialty_1_desc">Burn fat efficiently while fully maintaining lean muscle mass.
+                        <h2 class="display-4 fw-black text-white lh-1 mb-4" data-i18n="contact_title">Ready To Transform?</h2>
+                        <p class="lead text-muted mb-5 pe-lg-5" data-i18n="contact_desc">
+                            Fill out the biometric questionnaire below. It will redirect you directly to Coach Mahmoud on WhatsApp.
+                        </p>
+                        
+                        <div class="d-flex flex-column gap-4">
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="icon-box-m bg-primary rounded-circle p-2 text-black">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                </div>
+                                <div>
+                                    <span class="d-block smallest text-muted text-uppercase fw-bold ls-1">WhatsApp Hotline</span>
+                                    <strong class="text-white">+20 101 234 5678</strong>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="icon-box-m bg-primary rounded-circle p-2 text-black">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                </div>
+                                <div>
+                                    <span class="d-block smallest text-muted text-uppercase fw-bold ls-1">Support Email</span>
+                                    <strong class="text-white">support@coachmahmoud.com</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 reveal fade-right" data-delay="200">
+                        <div class="form-card glassmorphism p-4 p-md-5 rounded-4 border border-white border-opacity-10 shadow-lg">
+                            <form id="whatsappForm">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white small fw-bold" data-i18n="label_name">Full Name</label>
+                                        <input type="text" id="fullName" class="form-control glass-input" placeholder="Mahmoud Ahmed" data-i18n-placeholder="placeholder_name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white small fw-bold" data-i18n="label_phone">WhatsApp Number</label>
+                                        <input type="tel" id="phoneNumber" class="form-control glass-input" placeholder="+2010..." data-i18n-placeholder="placeholder_phone" required>
+                                    </div>
+                                    <div class="col-4">
+                                        <label class="form-label text-white small fw-bold" data-i18n="label_age">Age</label>
+                                        <input type="number" id="userAge" class="form-control glass-input" placeholder="25" data-i18n-placeholder="placeholder_age" required>
+                                    </div>
+                                    <div class="col-4">
+                                        <label class="form-label text-white small fw-bold" data-i18n="label_height">Height</label>
+                                        <input type="number" id="userHeight" class="form-control glass-input" placeholder="180" data-i18n-placeholder="placeholder_height" required>
+                                    </div>
+                                    <div class="col-4">
+                                        <label class="form-label text-white small fw-bold" data-i18n="label_weight">Weight</label>
+                                        <input type="number" id="userWeight" class="form-control glass-input" placeholder="85" data-i18n-placeholder="placeholder_weight" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label text-white small fw-bold" data-i18n="label_city">City & Country</label>
+                                        <input type="text" id="userCity" class="form-control glass-input" placeholder="Cairo, Egypt" data-i18n-placeholder="placeholder_city" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label text-white small fw-bold" data-i18n="label_package">Package</label>
+                                        <select id="selectedPackage" class="form-select glass-input" required>
+                                            <option value="" disabled selected data-i18n="placeholder_package">Choose a package</option>
+                                            <option value="Basic Transformation" data-i18n="option_basic">Basic Transformation</option>
+                                            <option value="Elite Coaching" data-i18n="option_elite">Elite Coaching</option>
+                                            <option value="VIP Ultimate Access" data-i18n="option_vip">VIP Access</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 mt-5">
+                                        <button type="submit" class="btn btn-primary btn-lg w-100 py-3 rounded-pill fw-black shadow-neon d-flex align-items-center justify-content-center gap-3">
+                                            <span data-i18n="btn_submit">Connect on WhatsApp</span>
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-5 border-top border-white border-opacity-10 bg-black">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-5">
+                    <a class="navbar-brand fw-black fs-3 logo d-block mb-4" href="#">
+                        <span class="text-primary">COACH</span> MAHMOUD
+                    </a>
+                    <p class="text-muted opacity-75 pe-lg-5 mb-4" data-i18n="footer_brand_desc">
+                        Premium 1-on-1 science-backed coaching. Change your physique, build discipline, and unlock your true performance potential.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-link border border-white border-opacity-25 rounded-circle p-2 transition">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" class="social-link border border-white border-opacity-25 rounded-circle p-2 transition">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="social-link border border-white border-opacity-25 rounded-circle p-2 transition">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="text-white fw-black text-uppercase small ls-2 mb-4" data-i18n="footer_nav_title">Navigation</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li><a href="#home" class="text-muted text-decoration-none small transition fw-bold hover-primary" data-i18n="footer_nav_home">Home</a></li>
+                        <li><a href="#about" class="text-muted text-decoration-none small transition fw-bold hover-primary" data-i18n="footer_nav_about">About</a></li>
+                        <li><a href="#transformations" class="text-muted text-decoration-none small transition fw-bold hover-primary" data-i18n="footer_nav_trans">Transformations</a></li>
+                        <li><a href="#pricing" class="text-muted text-decoration-none small transition fw-bold hover-primary" data-i18n="footer_nav_pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 col-md-8">
+                    <div class="glassmorphism p-4 rounded-4 border border-white border-opacity-10">
+                        <h6 class="text-white fw-black text-uppercase small ls-2 mb-3 d-flex align-items-center gap-2">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-primary"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                            <span data-i18n="footer_disclaimer_title">Medical Disclaimer</span>
+                        </h6>
+                        <p class="smallest text-muted opacity-75 mb-0" data-i18n="footer_disclaimer_text">
+                            All suggestions provided by Coach Mahmoud Hamada are designed strictly for educational and athletic enhancement. Please consult a qualified health provider before commencing any physical transformation protocol.
                         </p>
                     </div>
-
-                    <div class="specialty-card">
-                        <div class="specialty-icon-box">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M12 20v-8m0 0V4m0 8h8m-8 0H4"></path>
-                            </svg>
-                        </div>
-                        <h4>Hypertrophy & Muscle Gain</h4>
-                        <p data-i18n="specialty_2_desc">Targeted hyper-trophy cycles for maximum density and muscular
-                            growth.</p>
-                    </div>
-
-                    <div class="specialty-card">
-                        <div class="specialty-icon-box">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path
-                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h4 data-i18n="specialty_3_title">Body Recomposition</h4>
-                        <p data-i18n="specialty_3_desc">Build muscle and burn fat simultaneously through precise caloric
-                            matching.</p>
-                    </div>
-
-                    <div class="specialty-card">
-                        <div class="specialty-icon-box">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <path d="M12 8v8M8 12h8"></path>
-                            </svg>
-                        </div>
-                        <h4>Lifestyle & Longevity</h4>
-                        <p data-i18n="specialty_4_desc">Enhance cardiovascular metrics, flexibility, and sleep quality.
-                        </p>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Certifications Showcase Section -->
-    <section class="certificates-section" id="certificates">
-        <div class="container">
-            <div class="section-header reveal fade-up">
-                <span class="section-tagline">Academic & Professional Background</span>
-                <h2 class="section-title">Credentials & Certifications</h2>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="certificates-grid">
-                <div class="certificate-card reveal zoom-in" data-img="assets/images/certificate_1.png">
-                    <div class="cert-img-wrapper">
-                        <img src="assets/images/certificate_1.png" alt="Advanced Certified Personal Trainer Certificate"
-                            class="cert-thumb" loading="lazy">
-                        <div class="cert-overlay">
-                            <span class="cert-view-btn">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                    <line x1="11" y1="8" x2="11" y2="14"></line>
-                                    <line x1="8" y1="11" x2="14" y2="11"></line>
-                                </svg>
-                                Click to Expand
-                            </span>
-                        </div>
-                    </div>
-                    <div class="cert-info">
-                        <h3>Certified Personal Trainer (CPT)</h3>
-                        <p class="cert-issuer" data-i18n="cert_1_issuer">ISSA - International Sports Sciences
-                            Association</p>
-                    </div>
-                </div>
-
-                <div class="certificate-card reveal zoom-in" data-delay="150"
-                    data-img="assets/images/certificate_2.png">
-                    <div class="cert-img-wrapper">
-                        <img src="assets/images/certificate_2.png" alt="Certified Sports Nutritionist Certificate"
-                            class="cert-thumb" loading="lazy">
-                        <div class="cert-overlay">
-                            <span class="cert-view-btn">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                    <line x1="11" y1="8" x2="11" y2="14"></line>
-                                    <line x1="8" y1="11" x2="14" y2="11"></line>
-                                </svg>
-                                Click to Expand
-                            </span>
-                        </div>
-                    </div>
-                    <div class="cert-info">
-                        <h3>Sports Nutritionist Specialist (SNS)</h3>
-                        <p class="cert-issuer" data-i18n="cert_2_issuer">ISSA - International Sports Sciences
-                            Association</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Transformations -->
-    <section class="transformations" id="transformations">
-        <div class="container">
-            <div class="section-header reveal fade-up">
-                <span class="section-tagline" data-i18n="trans_tagline">Real Clients. Real Proof.</span>
-                <h2 class="section-title" data-i18n="trans_title">Client Transformations</h2>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="transformations-grid">
-                <div class="transformation-card reveal fade-up">
-                    <div class="trans-img-container" data-img="assets/images/transformation_1.png">
-                        <img src="assets/images/transformation_1.png" alt="12-Week Body Transformation Male Client"
-                            class="trans-img" loading="lazy">
-                        <div class="trans-overlay">
-                            <span class="trans-zoom-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                    <line x1="11" y1="8" x2="11" y2="14"></line>
-                                    <line x1="8" y1="11" x2="14" y2="11"></line>
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="trans-content">
-                        <div class="trans-meta">
-                            <span class="trans-tag">Fat Loss & Muscle Gain</span>
-                            <span class="trans-duration" data-i18n="trans_1_duration">12 Weeks</span>
-                        </div>
-                        <h3 data-i18n="trans_1_name">Ahmed's Transformation</h3>
-                        <p class="trans-details">Ahmed reduced body fat from 24% to 11% while gaining solid lean mass,
-                            fully rebuilding strength in compound lifts.</p>
-                        <ul class="trans-metrics">
-                            <li><strong>Weight Change:</strong> -14kg</li>
-                            <li><strong>Muscle Gained:</strong> +3.2kg</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="transformation-card reveal fade-up" data-delay="150">
-                    <div class="trans-img-container" data-img="assets/images/transformation_2.png">
-                        <img src="assets/images/transformation_2.png" alt="16-Week Body Transformation Female Client"
-                            class="trans-img" loading="lazy">
-                        <div class="trans-overlay">
-                            <span class="trans-zoom-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                    <line x1="11" y1="8" x2="11" y2="14"></line>
-                                    <line x1="8" y1="11" x2="14" y2="11"></line>
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="trans-content">
-                        <div class="trans-meta">
-                            <span class="trans-tag" data-i18n="trans_2_tag">Body Recomposition</span>
-                            <span class="trans-duration" data-i18n="trans_2_duration">16 Weeks</span>
-                        </div>
-                        <h3 data-i18n="trans_2_name">Sarah's Transformation</h3>
-                        <p class="trans-details">Sarah completely reshaped her posture, sculpted core definition, and
-                            improved functional endurance and metabolic rate.</p>
-                        <ul class="trans-metrics">
-                            <li><strong>Weight Change:</strong> -8.5kg</li>
-                            <li><strong>Body Fat Change:</strong> -12.5%</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header reveal fade-up">
-                <span class="section-tagline" data-i18n="services_tagline">How We Work Together</span>
-                <h2 class="section-title" data-i18n="services_title">Coaching Architecture</h2>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card reveal fade-up">
-                    <div class="service-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M6.5 6.5h11M6.5 12h11M6.5 17.5h11"></path>
-                            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                        </svg>
-                    </div>
-                    <h3 data-i18n="svc_1_title">Bespoke Workout Design</h3>
-                    <p>No generic PDF files. Every routine is mapped dynamically based on your available equipment,
-                        structural biomechanics, joints mobility, and physical targets.</p>
-                </div>
-
-                <div class="service-card reveal fade-up" data-delay="100">
-                    <div class="service-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                        </svg>
-                    </div>
-                    <h3>Caloric & Macro Architecture</h3>
-                    <p>Science-backed meal planning designed around foods you actually enjoy. Includes customized
-                        calculations, hydration formulas, and strategic supplementation guidance.</p>
-                </div>
-
-                <div class="service-card reveal fade-up" data-delay="200">
-                    <div class="service-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <h3>Daily Follow-Up & Accountability</h3>
-                    <p>Direct communication to update weight charts, track training progression logs, evaluate form via
-                        videos, and handle dynamic weekly nutrition modifications.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Packages -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-header reveal fade-up">
-                <span class="section-tagline" data-i18n="pricing_tagline">Choose Your Pathway</span>
-                <h2 class="section-title" data-i18n="pricing_title">Coaching Programs</h2>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="pricing-grid">
-                <!-- Basic Card -->
-                <div class="price-card reveal fade-up">
-                    <div class="price-header">
-                        <h3 data-i18n="pkg_basic_name">Basic Transformation</h3>
-                        <div class="price-amount">$59<span class="price-period">/Month</span></div>
-                        <p class="price-desc">Perfect for self-motivated individuals needing structured instruction.</p>
-                    </div>
-                    <ul class="price-features">
-                        <li>
-                            <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="3">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Customized Workout Program
-                        </li>
-                        <li>
-                            <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="3">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Personalized Nutrition Plan
-                        </li>
-                        <li>
-                            <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="3">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Weekly Follow-Up & Adjustments
-                        </li>
-                        <li class="disabled">
-                            <svg class="icon-close" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="3">
-                                <line x1="18" y1="6" x2="6" y2="18"></line>
-                                <line x1="6" y1="6" x2="18" y2="18"></line>
-                            </svg>
-                            Daily WhatsApp Chat Support
-                        </li>
-                        <li class="disabled">
-                            <svg class="icon-close" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="3">
-                                <line x1="18" y1="6" x2="6" y2="18"></line>
-                                <line x1="6" y1="6" x2="18" y2="18"></line>
-                            </svg>
-                            Video Exercise Form Review
-                        </li>
-                    </ul>
-                    <a href="#contact" class="btn btn-secondary select-pkg-btn" data-package="Basic Transformation"
-                        id="pricing-select-basic" data-i18n="btn_select">Select Plan</a>
-                </div>
-
-                <!-- Professional Card (Recommended) -->
-                <div class="price-card popular reveal fade-up" data-delay="100">
-                    <div class="popular-ribbon" data-i18n="price_ribbon">RECOMMENDED</div>
-                    <div class="price-header">
-                        <h3 data-i18n="pkg_elite_name">Elite Coaching</h3>
-                        <div class="price-amount">$99<span class="price-period">/Month</span></div>
-                        <p class="price-desc">Our flagship accountability model targeting dramatic recomposition.</p>
-                    </div>
-                    <ul class="price-features">
-                        <li>
-                            <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="3">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Customized Workout Program
-                        </li>
-                        <li>
-                            <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="3">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Personalized Nutrition Plan
-                        </li>
-                        <li>
-                            <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="3">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Daily Progress Charting
-                        </li>
-                        <li>
-                            <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="3">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Daily WhatsApp Chat Support
-                        </li>
-                        <li>
-                            <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="3">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Video Exercise Form Review
-                        </li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary btn-ripple select-pkg-btn" data-package="Elite Coaching"
-                        id="pricing-select-elite" data-i18n="btn_get_started">Get Started</a>
-                </div>
-
-                <!-- VIP Card -->
-                <div class="price-card vip reveal fade-up" data-delay="200">
-                    <div class="price-header">
-                        <h3 data-i18n="pkg_vip_name">VIP Ultimate Access</h3>
-                        <div class="price-amount">$189<span class="price-period">/Month</span></div>
-                        <p class="price-desc">Full integration with Coach Mahmoud for maximum priority support.</p>
-                    </div>
-                    <ul class="price-features">
-                        <li>
-                            <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="3">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Priority Custom Design Upgrades
-                        </li>
-                        <li>
-                            <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="3">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Bespoke Nutrition & Custom Supplementation
-                        </li>
-                        <li>
-                            <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="3">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Unlimited Video Analysis & Real-time Edits
-                        </li>
-                        <li>
-                            <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="3">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Direct Phone & Priority WhatsApp Call Access
-                        </li>
-                        <li>
-                            <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="3">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Weekly 1-on-1 Strategy Video Consultation
-                        </li>
-                    </ul>
-                    <a href="#contact" class="btn btn-secondary select-pkg-btn" data-package="VIP Ultimate Access"
-                        id="pricing-select-vip" data-i18n="btn_unlock_vip">Unlock VIP</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Me Section -->
-    <section class="why-choose-me" id="why-choose-me">
-        <div class="container">
-            <div class="section-header reveal fade-up">
-                <span class="section-tagline" data-i18n="why_tagline">The Coaching Difference</span>
-                <h2 class="section-title" data-i18n="why_title">Why Coach Mahmoud?</h2>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="why-grid">
-                <div class="why-card reveal fade-up">
-                    <div class="why-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                    </div>
-                    <h3>Certified & Scientific</h3>
-                    <p>Fully certified with international qualifications, avoiding standard workout trends in favor of
-                        verified biological and hypertrophy science.</p>
-                </div>
-
-                <div class="why-card reveal fade-up" data-delay="100">
-                    <div class="why-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M17.5 19v-2a4 4 0 0 0-4-4h-3a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="11" cy="7" r="4"></circle>
-                        </svg>
-                    </div>
-                    <h3 data-i18n="why_2_title">100% Tailored Layouts</h3>
-                    <p>I design your charts from zero. Your foods, schedule, and biomechanical parameters form the core
-                        structure of your programs.</p>
-                </div>
-
-                <div class="why-card reveal fade-up" data-delay="200">
-                    <div class="why-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                    </div>
-                    <h3 data-i18n="why_3_title">Fast Accountability Response</h3>
-                    <p>No waiting days for feedback. Updates and corrections are handled with priority so your progress
-                        never stalls.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-header reveal fade-up">
-                <span class="section-tagline" data-i18n="test_tagline">Client Success Stories</span>
-                <h2 class="section-title" data-i18n="test_title">What My Clients Say</h2>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="testimonials-slider reveal fade-up">
-                <div class="testimonials-wrapper" id="testimonialsWrapper">
-
-                    <!-- Testimonial 1 -->
-                    <div class="testimonial-slide active">
-                        <div class="testimonial-card">
-                            <div class="test-rating">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                            </div>
-                            <p class="test-text">
-                                "Coaching with Mahmoud has been an absolute game changer. I've struggled to lose fat for
-                                years while maintaining strength. Within 12 weeks, he completely overhauled my nutrition
-                                and custom training program, and the fat literally melted away."
-                            </p>
-                            <div class="test-user">
-                                <div class="test-avatar">AM</div>
-                                <div>
-                                    <h4 class="test-name">Ahmed M.</h4>
-                                    <span class="test-achievement">Lost 14kg & Gained Muscle</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 2 -->
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="test-rating">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                            </div>
-                            <p class="test-text">
-                                "The level of detail Coach Mahmoud puts into the weekly updates is unmatched. He didn't
-                                just give me diet rules; he explained the macros, helped me modify choices when
-                                traveling, and kept me strictly on track. Recommended for anyone looking for serious
-                                results."
-                            </p>
-                            <div class="test-user">
-                                <div class="test-avatar">SY</div>
-                                <div>
-                                    <h4 class="test-name">Sarah Y.</h4>
-                                    <span class="test-achievement" data-i18n="test_2_achievement">12.5% Body Fat
-                                        Reduction</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 3 -->
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="test-rating">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                            </div>
-                            <p class="test-text">
-                                "As a busy professional, finding time to train was impossible. Coach Mahmoud created a
-                                highly effective 45-minute home workout program and taught me flexible dieting that fits
-                                my schedule. Extremely professional and communicative."
-                            </p>
-                            <div class="test-user">
-                                <div class="test-avatar">OM</div>
-                                <div>
-                                    <h4 class="test-name">Omar M.</h4>
-                                    <span class="test-achievement" data-i18n="test_3_achievement">Improved Muscle
-                                        Definition</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonials-controls">
-                    <button class="test-btn-prev" id="testPrev" aria-label="Previous Testimonial">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                    </button>
-                    <div class="testimonials-dots" id="testimonialsDots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <button class="test-btn-next" id="testNext" aria-label="Next Testimonial">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Frequently Asked Questions -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-header reveal fade-up">
-                <span class="section-tagline" data-i18n="faq_tagline">Clear Answers</span>
-                <h2 class="section-title" data-i18n="faq_title">Frequently Asked Questions</h2>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="faq-accordion reveal fade-up">
-                <!-- FAQ 1 -->
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false" id="faq-q-1">
-                        <span data-i18n="faq_1_q">How fast will I receive my custom workout and meal plans?</span>
-                        <span class="faq-icon-arrow">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>After you submit your initial fitness assessment form and complete your subscription, Coach
-                            Mahmoud will conduct a full analysis of your structure, metabolic history, and schedule.
-                            Your personalized training and nutrition blueprints will be delivered directly to your
-                            WhatsApp dashboard within 48 to 72 hours.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 2 -->
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false" id="faq-q-2">
-                        <span data-i18n="faq_2_q">Can I train if I only have a home setup or minimal weights?</span>
-                        <span class="faq-icon-arrow">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes. Every training plan is built around the equipment you have available. If you only have
-                            resistance bands, dumbbells, or just bodyweight, your routine will be optimized for maximum
-                            mechanical tension and hypertrophy using home-specific progressions.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 3 -->
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false" id="faq-q-3">
-                        <span data-i18n="faq_3_q">What if I have foods I absolutely dislike or cannot eat?</span>
-                        <span class="faq-icon-arrow">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>I follow a flexible dieting method backed by strict structural macros. In your assessment
-                            form, you will outline all food allergies, preferences, and details. Your meal plan is built
-                            to only contain foods you enjoy, ensuring the diet is sustainable long-term.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 4 -->
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false" id="faq-q-4">
-                        <span data-i18n="faq_4_q">How do the weekly check-ins and follow-ups work?</span>
-                        <span class="faq-icon-arrow">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>For standard plans, you will submit a weekly check-in sheet detailing weight parameters,
-                            measurements, and training performance. Based on this data, Coach Mahmoud adjusts your
-                            macros, caloric density, and workout load. For Elite and VIP plans, this tracking and
-                            communication is done daily on WhatsApp.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section class="contact" id="contact">
-        <div class="container contact-container">
-            <div class="contact-info reveal fade-left">
-                <div class="badge-premium" data-i18n="contact_badge">START TODAY</div>
-                <h2 class="contact-title">Ready To Transform Your Body & Mind?</h2>
-                <p class="contact-desc">
-                    Fill out the rapid biometric questionnaire below. Once submitted, it will compile your stats and
-                    redirect you directly to Coach Mahmoud on WhatsApp to finalize your enrollment.
-                </p>
-
-                <div class="contact-methods">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path
-                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div>
-                            <span>WhatsApp Hotline</span>
-                            <strong>+20 101 234 5678</strong>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                </path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                        </div>
-                        <div>
-                            <span>Support Email</span>
-                            <strong>support@coachmahmoud.com</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Form Card -->
-            <div class="contact-form-wrapper reveal fade-right">
-                <form class="contact-form" id="whatsappForm">
-                    <h3 class="form-title" data-i18n="form_title">Biometric Assessment</h3>
-                    <p class="form-subtitle-text" data-i18n="form_subtitle">Enter your metrics below to calculate your
-                        tailored coach macros.</p>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="fullName" data-i18n="label_name">Full Name *</label>
-                            <div class="input-with-icon">
-                                <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="12" cy="7" r="4"></circle>
-                                </svg>
-                                <input type="text" id="fullName" class="form-control" placeholder="Enter your full name"
-                                    data-i18n-placeholder="placeholder_name" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="phoneNumber" data-i18n="label_phone">WhatsApp Number *</label>
-                            <div class="input-with-icon">
-                                <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                                    </path>
-                                </svg>
-                                <input type="tel" id="phoneNumber" class="form-control" placeholder="e.g. +201012345678"
-                                    data-i18n-placeholder="placeholder_phone" required>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-row three-cols">
-                        <div class="form-group">
-                            <label for="userAge" data-i18n="label_age">Age *</label>
-                            <div class="input-with-icon">
-                                <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                                </svg>
-                                <input type="number" id="userAge" class="form-control" placeholder="Age"
-                                    data-i18n-placeholder="placeholder_age" min="12" max="100" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="userHeight" data-i18n="label_height">Height (cm) *</label>
-                            <div class="input-with-icon">
-                                <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="9" y1="5" x2="15" y2="5"></line>
-                                    <line x1="9" y1="12" x2="15" y2="12"></line>
-                                    <line x1="9" y1="19" x2="15" y2="19"></line>
-                                </svg>
-                                <input type="number" id="userHeight" class="form-control" placeholder="cm"
-                                    data-i18n-placeholder="placeholder_height" min="100" max="250" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="userWeight" data-i18n="label_weight">Weight (kg) *</label>
-                            <div class="input-with-icon">
-                                <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                                </svg>
-                                <input type="number" id="userWeight" class="form-control" placeholder="kg"
-                                    data-i18n-placeholder="placeholder_weight" min="30" max="300" required>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="userCity">City & Country *</label>
-                            <div class="input-with-icon">
-                                <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                </svg>
-                                <input type="text" id="userCity" class="form-control" placeholder="e.g. Cairo, Egypt"
-                                    data-i18n-placeholder="placeholder_city" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="selectedPackage" data-i18n="label_package">Selected Coaching Package *</label>
-                            <div class="input-with-icon">
-                                <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                                <select id="selectedPackage" class="form-control" required>
-                                    <option value="" disabled selected data-i18n="placeholder_package">Choose a package
-                                    </option>
-                                    <option value="Basic Transformation" data-i18n="option_basic">Basic Transformation -
-                                        $59/mo</option>
-                                    <option value="Elite Coaching" data-i18n="option_elite">Elite Coaching (Recommended)
-                                        - $99/mo</option>
-                                    <option value="VIP Ultimate Access" data-i18n="option_vip">VIP Ultimate Access -
-                                        $189/mo</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-full btn-ripple" id="btn-submit-form">
-                        <span data-i18n="btn_submit">Send Biometrics on WhatsApp</span>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" style="margin-left: 8px;">
-                            <line x1="22" y1="2" x2="11" y2="13"></line>
-                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                        </svg>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lightbox Modal for Images -->
-    <div class="lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-hidden="true">
-        <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-        </button>
-        <div class="lightbox-content">
-            <img src="" alt="Expanded certificate or transformation image" id="lightboxImage">
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <a href="#" class="logo"><span>COACH</span> MAHMOUD</a>
-                <p>Premium 1-on-1 science-backed coaching. Change your physique, build discipline, and unlock your true
-                    performance potential.</p>
-                <div class="footer-socials">
-                    <a href="https://instagram.com/coach_mahmoud_hamada" target="_blank" rel="noopener noreferrer"
-                        class="social-icon" aria-label="Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
-                    <a href="https://facebook.com/coach_mahmoud_hamada" target="_blank" rel="noopener noreferrer"
-                        class="social-icon" aria-label="Facebook">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://tiktok.com/@coach_mahmoud_hamada" target="_blank" rel="noopener noreferrer"
-                        class="social-icon" aria-label="TikTok">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-                        </svg>
-                    </a>
-                    <a href="https://wa.me/201012345678" target="_blank" rel="noopener noreferrer" class="social-icon"
-                        aria-label="WhatsApp">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path
-                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
-                            </path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer-links">
-                <h4 data-i18n="footer_nav_title">Navigation</h4>
-                <a href="#home" data-i18n="footer_nav_home">Home</a>
-                <a href="#about" data-i18n="footer_nav_about">About</a>
-                <a href="#transformations" data-i18n="footer_nav_trans">Transformations</a>
-                <a href="#services" data-i18n="footer_nav_services">Services</a>
-                <a href="#pricing" data-i18n="footer_nav_pricing">Pricing Plans</a>
-                <a href="#contact" data-i18n="footer_nav_contact">Contact</a>
-            </div>
-
-            <div class="footer-disclaimer">
-                <h4 data-i18n="footer_disclaimer_title">Medical Disclaimer</h4>
-                <p>All fitness routines, metabolic suggestions, and nutrition guidelines provided by Coach Mahmoud
-                    Hamada are designed strictly for educational and athletic enhancement. Please consult a qualified
-                    health provider before commencing any physical transformation protocol.</p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="container footer-bottom-container">
-                <p>&copy; 2026 Coach Mahmoud Hamada. All Rights Reserved.</p>
-                <p>Designed for elite athletic training.</p>
+            
+            <div class="mt-5 pt-5 border-top border-white border-opacity-5 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <p class="smallest text-muted mb-0">&copy; 2026 Coach Mahmoud Hamada. <span data-i18n="footer_copy">All Rights Reserved.</span></p>
+                <p class="smallest text-muted text-uppercase fw-bold ls-1 mb-0" data-i18n="footer_tagline">Designed for elite athletic training.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="modal fade" id="imageLightbox" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0 position-relative">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <img src="" alt="Expanded Image" id="lightboxImage" class="img-fluid rounded-4 shadow-lg w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3.3 Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
     <!-- Translation Files -->
     <script src="trans/ar.js"></script>
