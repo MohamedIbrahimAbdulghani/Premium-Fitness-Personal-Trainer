@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Configuration
     const CONFIG = {
-        whatsappNumber: '201012345678', // Egypt country code + phone number
+        whatsappNumber: '+201208910206', // Egypt country code + phone number
         scrollOffset: 90
     };
 
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
        1. Header Scroll Effect
        ========================================================================== */
     const header = document.getElementById('header');
-    
+
     const handleHeaderScroll = () => {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
@@ -156,22 +156,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 name: document.getElementById('fullName').value.trim(),
                 phone: document.getElementById('phoneNumber').value.trim(),
                 age: document.getElementById('userAge').value,
-                height: document.getElementById('userHeight').value,
+                goal: document.getElementById('userGoal').value,
+                package: document.getElementById('selectedPackage').value,
                 weight: document.getElementById('userWeight').value,
-                city: document.getElementById('userCity').value.trim(),
-                package: document.getElementById('selectedPackage').value
+                height: document.getElementById('userHeight').value,
+                experience: document.getElementById('trainingExperience').value,
+                medical: document.getElementById('medicalConditions').value,
+                notes: document.getElementById('userNotes').value.trim()
             };
 
-            const message = 
-`🔥 *NEW TRANSFORMATION REQUEST* 🔥
+            const message =
+                `🔥 *NEW TRANSFORMATION REQUEST* 🔥
 
 *👤 Name:* ${data.name}
 *📞 Phone:* ${data.phone}
 *🎂 Age:* ${data.age} years
-*📏 Height:* ${data.height} cm
-*⚖️ Weight:* ${data.weight} kg
-*📍 Location:* ${data.city}
+*🎯 Goal:* ${data.goal}
 *⚡ Selected Plan:* ${data.package}
+*⚖️ Weight:* ${data.weight} kg
+*📏 Height:* ${data.height} cm
+*💪 Experience:* ${data.experience}
+*🏥 Medical Conditions/Injuries:* ${data.medical}
+*📝 Notes:* ${data.notes || "None"}
 
 I am ready to start my journey with Coach Mahmoud!`;
 
