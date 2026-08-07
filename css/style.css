@@ -551,3 +551,10 @@ body {
 @media (max-width: 390px) {
   .navbar-brand { font-size: 1.25rem !important; }
 }
+
+/* Lightbox Image Adjustment */
+#lightboxImage {
+  max-height: 90vh;
+  width: auto;
+  object-fit: contain;
+}
