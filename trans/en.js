@@ -1,6 +1,7 @@
 // English translations
 const en = {
     // ---- NAV ----
+    nav_logo: '<span class="text-primary">COACH</span> MAHMOUD',
     nav_home: "Home",
     nav_about: "About",
     nav_transformations: "Transformations",
@@ -51,6 +52,18 @@ const en = {
     specialty_4_title: "Lifestyle & Longevity",
     specialty_4_desc: "Enhance cardiovascular metrics, flexibility, and sleep quality.",
 
+    // ---- PROCESS / HOW IT WORKS ----
+    process_tagline: "The Process",
+    process_title: "How We Get You There",
+    step_1_title: "Reach Out",
+    step_1_desc: "Message Coach Mahmoud on WhatsApp and tell him your goal, your struggles, and where you're starting from.",
+    step_2_title: "Free Assessment",
+    step_2_desc: "A real conversation about your body, your schedule, and your history — no templates, no guesswork.",
+    step_3_title: "Custom Plan",
+    step_3_desc: "A training and nutrition plan built for your body, your equipment, and your life — not a copy-paste PDF.",
+    step_4_title: "Weekly Check-Ins",
+    step_4_desc: "Direct check-ins, form reviews, and plan adjustments every week until you hit the number you came for.",
+
     // ---- CERTIFICATES ----
     cert_tagline: "Academic & Professional Background",
     cert_title: "Credentials & Certifications",
@@ -75,6 +88,7 @@ const en = {
     // ---- TRANSFORMATIONS ----
     trans_tagline: "Real Clients. Real Proof.",
     trans_title: "Client Transformations",
+    trans_start_story: "Start Your Story",
     trans_1_tag: "Fat Loss & Muscle Gain",
     trans_1_duration: "12 Weeks",
     trans_1_name: "Ahmed's Transformation",
@@ -91,6 +105,10 @@ const en = {
     trans_2_m1_val: "-8.5kg",
     trans_2_m2_label: "Body Fat Change:",
     trans_2_m2_val: "-12.5%",
+
+    // ---- TRANSFORMATIONS (SECTION HEADER) ----
+    transformations_tagline: "Real Proof",
+    transformations_title: "Success Stories",
 
     // ---- SERVICES ----
     services_tagline: "How We Work Together",
@@ -150,9 +168,23 @@ const en = {
     test_3_text: '"As a busy professional, finding time to train was impossible. Coach Mahmoud created a highly effective 45-minute home workout program and taught me flexible dieting that fits my schedule. Extremely professional and communicative."',
     test_3_achievement: "Improved Muscle Definition",
 
+    // ---- TESTIMONIALS (SECTION HEADER + CARDS) ----
+    testimonials_tagline: "Real Words",
+    testimonials_title: "What Clients Say",
+    testi_1_text: "\"Coach Mahmoud didn't just send me a plan and disappear. He was on me every single day, adjusting things when I plateaued. I lost 18kg and actually kept it off.\"",
+    testi_1_name: "Ahmed K.",
+    testi_1_meta: "-18kg · 16 weeks",
+    testi_2_text: "\"I'd tried three other coaches before. None of them checked my form on video like Mahmoud does. That alone fixed injuries I'd been carrying for years.\"",
+    testi_2_name: "Sara M.",
+    testi_2_meta: "Body recomposition · 5 months",
+    testi_3_text: "\"Gained 9kg of lean muscle in under a year on the VIP plan. The weekly calls kept me honest even when motivation dropped.\"",
+    testi_3_name: "Omar T.",
+    testi_3_meta: "+9kg muscle · 11 months",
+
     // ---- FAQ ----
     faq_tagline: "Clear Answers",
     faq_title: "Frequently Asked Questions",
+    faq_desc: "Everything you need to know about starting your transformation journey with Coach Mahmoud.",
     faq_1_q: "How fast will I receive my custom workout and meal plans?",
     faq_1_a: "After you submit your initial fitness assessment form and complete your subscription, Coach Mahmoud will conduct a full analysis of your structure, metabolic history, and schedule. Your personalized training and nutrition blueprints will be delivered directly to your WhatsApp dashboard within 48 to 72 hours.",
     faq_2_q: "Can I train if I only have a home setup or minimal weights?",
@@ -200,7 +232,6 @@ const en = {
     option_exp_3: "Advanced",
     option_med_no: "No",
     option_med_yes: "Yes",
-    placeholder_package: "Choose a package",
     option_basic: "Basic Transformation - $59/mo",
     option_elite: "Elite Coaching (Recommended) - $99/mo",
     option_vip: "VIP Ultimate Access - $189/mo",
@@ -219,4 +250,10 @@ const en = {
     footer_disclaimer_text: "All fitness routines, metabolic suggestions, and nutrition guidelines provided by Coach Mahmoud Hamada are designed strictly for educational and athletic enhancement. Please consult a qualified health provider before commencing any physical transformation protocol.",
     footer_copy: "© 2026 Coach Mahmoud Hamada. All Rights Reserved.",
     footer_tagline: "Designed for elite athletic training.",
+
+    // ---- ALT TEXTS ----
+    alt_coach: "Coach Mahmoud Hamada",
+    alt_workout: "Coach Mahmoud Hamada Workout",
+    alt_cert: "Certified Credential of Coach Mahmoud Hamada",
+    alt_trans: "Before and After Client Transformation with Coach Mahmoud",
 };

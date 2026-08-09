@@ -17,7 +17,7 @@ const I18n = (() => {
         const t = translations[lang];
         if (!t) return;
 
-        // Update all text content nodes
+        // هنا بنحدث النصوص الأساسية
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (t[key] !== undefined) {
@@ -25,11 +25,19 @@ const I18n = (() => {
             }
         });
 
-        // Update all placeholder attributes
+        // هنا بنحدث الـ placeholder للمدخلات
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
             const key = el.getAttribute('data-i18n-placeholder');
             if (t[key] !== undefined) {
                 el.placeholder = t[key];
+            }
+        });
+
+        // هنا بنحدث الـ alt للصور
+        document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+            const key = el.getAttribute('data-i18n-alt');
+            if (t[key] !== undefined) {
+                el.alt = t[key];
             }
         });
 

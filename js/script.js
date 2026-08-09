@@ -95,11 +95,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================================================
-       4. Bootstrap Lightbox Integration
+       4. Bootstrap Lightbox Integration (Certificates)
        ========================================================================== */
     const lightboxModal = document.getElementById('imageLightbox');
     const lightboxImg = document.getElementById('lightboxImage');
-    const triggerCards = document.querySelectorAll('.certificate-card-new, .trans-img-side');
+    // بنستخدم السيليكتور الجديد بتاع الجاليري بدل القديم
+    const triggerCards = document.querySelectorAll('.certificate-card-new, .trans-gallery-card');
 
     if (lightboxModal) {
         const bsModal = new bootstrap.Modal(lightboxModal);
@@ -117,6 +118,36 @@ document.addEventListener('DOMContentLoaded', () => {
         // Clear image on close for performance
         lightboxModal.addEventListener('hidden.bs.modal', () => {
             lightboxImg.src = '';
+        });
+    }
+
+    /* ==========================================================================
+       4b. Transformation Gallery Modal (Fit To Screen Fix)
+       ------------------------------------------------------------------------
+       الصور بتاعة "Success Stories" بتفتح موديل باسم #imageModal عن طريق
+       data-bs-toggle="modal" الخاصة ببوتستراب نفسها، لكن مفيش كود كان بياخد
+       رابط الصورة (data-image) ويحطه جوه <img id="modalImage">.
+       عشان كده هنا بنسمع لحدث "show.bs.modal" ونجيب العنصر اللي المستخدم
+       دوس عليه (relatedTarget) ونحط الصورة بتاعته جوه الموديل، بنفس الوقت
+       الـ CSS بتاعة #imageModal / #modalImage بتتأكد إن الصورة تفضل جوه
+       الشاشة (max-width / max-height) وميبقاش فيه أي تكبير زيادة عن اللازم.
+       ========================================================================== */
+    const transformationModal = document.getElementById('imageModal');
+    const transformationModalImg = document.getElementById('modalImage');
+
+    if (transformationModal && transformationModalImg) {
+        transformationModal.addEventListener('show.bs.modal', (event) => {
+            const trigger = event.relatedTarget;
+            const imgSrc = trigger ? trigger.getAttribute('data-image') : null;
+            if (imgSrc) {
+                transformationModalImg.src = imgSrc;
+                transformationModalImg.alt = trigger.getAttribute('data-alt') || 'Transformation';
+            }
+        });
+
+        // Clear image on close for performance
+        transformationModal.addEventListener('hidden.bs.modal', () => {
+            transformationModalImg.src = '';
         });
     }
 

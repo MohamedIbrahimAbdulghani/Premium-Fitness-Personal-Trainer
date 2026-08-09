@@ -3,11 +3,12 @@
    ========================================================================== */
 :root {
   /* Core Colors - Premium Fitness Palette */
-  --primary: #ff6f00; /* Deep Neon Orange */
+  --primary: #ff6f00;
+  /* Deep Neon Orange */
   --primary-glow: rgba(255, 111, 0, 0.4);
   --primary-soft: rgba(255, 111, 0, 0.15);
   --secondary: #1a1a1a;
-  
+
   --bg-black: #050505;
   --bg-dark-1: #0a0a0a;
   --bg-dark-2: #111111;
@@ -35,7 +36,7 @@
   /* Transitions */
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   /* Sections */
   --section-padding: 100px;
 }
@@ -66,7 +67,12 @@ body {
   font-family: var(--font-arabic), var(--font-primary);
 }
 
-[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 {
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
   font-family: var(--font-arabic);
 }
 
@@ -97,33 +103,102 @@ body {
 /* ==========================================================================
    Typography & Utilities
    ========================================================================== */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 900;
   color: var(--text-white);
   letter-spacing: -0.02em;
 }
 
-.fw-black { font-weight: 900 !important; }
-.ls-1 { letter-spacing: 1px; }
-.ls-2 { letter-spacing: 2px; }
-.smallest { font-size: 0.65rem; }
-.h-fit { height: fit-content; }
-.cursor-pointer { cursor: pointer; }
-.py-section { padding: var(--section-padding) 0; }
-.bg-darker-1 { background-color: var(--bg-dark-1); }
-.bg-darker-2 { background-color: var(--bg-dark-2); }
-.italic { font-style: italic; }
+.fw-black {
+  font-weight: 900 !important;
+}
+
+.ls-1 {
+  letter-spacing: 1px;
+}
+
+.ls-2 {
+  letter-spacing: 2px;
+}
+
+.smallest {
+  font-size: 0.65rem;
+}
+
+.h-fit {
+  height: fit-content;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.py-section {
+  padding: var(--section-padding) 0;
+}
+
+.bg-darker-1 {
+  background-color: var(--bg-dark-1);
+}
+
+.bg-darker-2 {
+  background-color: var(--bg-dark-2);
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* بنضيف كلاس inset-0 لتغطية الكارت بالكامل */
+.inset-0 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* أيقونات الأوفرلاي في التحولات */
+.icon-box-m {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-box-l {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
 
 /* Custom Bootstrap Colors */
-.text-primary { color: var(--primary) !important; }
-.bg-primary { background-color: var(--primary) !important; }
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
 .btn-primary {
   background-color: var(--primary);
   border-color: var(--primary);
   color: #000;
 }
-.btn-primary:hover, .btn-primary:focus {
+
+.btn-primary:hover,
+.btn-primary:focus {
   background-color: #e66500;
   border-color: #e66500;
   color: #000;
@@ -135,6 +210,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary);
   border-color: var(--primary);
 }
+
 .btn-outline-primary:hover {
   background-color: var(--primary);
   border-color: var(--primary);
@@ -146,6 +222,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   border: none;
 }
+
 .btn-black:hover {
   background-color: #111;
   color: var(--primary);
@@ -229,6 +306,64 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 120px;
 }
 
+/* هنا بنظبط سيكشن الهيرو عشان يملى الصفحة بالظبط على الديسكتوب من غير سكرول */
+@media (min-width: 992px) {
+  .hero-section {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    padding-top: 90px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-visual-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-visual {
+    max-height: calc(100vh - 160px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-img-box {
+    max-height: calc(100vh - 180px);
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .hero-img {
+    max-height: calc(100vh - 200px);
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .hero-title {
+    font-size: calc(2.2rem + 2.5vw) !important;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
 .hero-bg-glow {
   width: 600px;
   height: 600px;
@@ -269,8 +404,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .hero-visual {
@@ -325,9 +467,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes scroll-wheel {
-  0% { opacity: 0; transform: translate(-50%, 0); }
-  30% { opacity: 1; }
-  100% { opacity: 0; transform: translate(-50%, 15px); }
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 15px);
+  }
 }
 
 /* ==========================================================================
@@ -356,47 +508,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Certificate & Transformation Cards
-   ========================================================================== */
-.certificate-card-new, .trans-card-new, .service-card-new, .price-card-new {
-  transition: var(--transition);
-}
-
-.certificate-card-new:hover {
-  transform: translateY(-10px);
-  border-color: var(--primary) !important;
-}
-
-.group-hover-scale {
-  transition: var(--transition-slow);
-}
-
-.certificate-card-new:hover .group-hover-scale {
-  transform: scale(1.1);
-}
-
-.trans-card-new:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-}
-
-.trans-img-side {
-  overflow: hidden;
-}
-
-.trans-img-side img {
-  transition: var(--transition-slow);
-}
-
-.trans-card-new:hover .trans-img-side img {
-  transform: scale(1.05);
-}
-
-.metric span:last-child {
-  line-height: 1;
-}
-
-/* ==========================================================================
    Services
    ========================================================================== */
 .service-card-new:hover {
@@ -411,7 +522,7 @@ h1, h2, h3, h4, h5, h6 {
 .pricing-bg-glow {
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(255,111,0,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 111, 0, 0.08) 0%, transparent 70%);
   bottom: -300px;
   left: -200px;
   z-index: 0;
@@ -421,7 +532,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 15px;
   right: -35px;
   transform: rotate(45deg);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .price-card-new.bg-primary {
@@ -508,10 +619,21 @@ select.glass-input option {
   transition: var(--transition-slow);
 }
 
-.reveal.fade-up { transform: translateY(40px); }
-.reveal.fade-left { transform: translateX(-40px); }
-.reveal.fade-right { transform: translateX(40px); }
-.reveal.zoom-in { transform: scale(0.9); }
+.reveal.fade-up {
+  transform: translateY(40px);
+}
+
+.reveal.fade-left {
+  transform: translateX(-40px);
+}
+
+.reveal.fade-right {
+  transform: translateX(40px);
+}
+
+.reveal.zoom-in {
+  transform: scale(0.9);
+}
 
 .reveal.active {
   opacity: 1 !important;
@@ -525,12 +647,19 @@ select.glass-input option {
   :root {
     --section-padding: 60px;
   }
-  
-  .display-1 { font-size: 3.5rem; }
-  .display-4 { font-size: 2.5rem; }
-  
-  .py-section { padding: 60px 0; }
-  
+
+  .display-1 {
+    font-size: 3.5rem;
+  }
+
+  .display-4 {
+    font-size: 2.5rem;
+  }
+
+  .py-section {
+    padding: 60px 0;
+  }
+
   .hero-section {
     padding-top: 80px;
     text-align: center;
@@ -538,23 +667,454 @@ select.glass-input option {
 }
 
 /* Transitions Utilities */
-.transition { transition: var(--transition); }
-.transition-slow { transition: var(--transition-slow); }
+.transition {
+  transition: var(--transition);
+}
+
+.transition-slow {
+  transition: var(--transition-slow);
+}
 
 /* Horizontal Overflow Prevention */
 body {
   overflow-x: clip;
 }
+
 .row {
   --bs-gutter-x: 1.5rem;
 }
+
 @media (max-width: 390px) {
-  .navbar-brand { font-size: 1.25rem !important; }
+  .navbar-brand {
+    font-size: 1.25rem !important;
+  }
 }
 
-/* Lightbox Image Adjustment */
-#lightboxImage {
-  max-height: 90vh;
+/* =========================================
+   Transformations - Image Gallery
+========================================= */
+
+.transformation-image {
+  height: 350px;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.35s ease;
+}
+
+.transformation-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.transformation-image:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 15px 35px rgba(255, 111, 0, 0.18);
+}
+
+.transformation-image:hover img {
+  transform: scale(1.06);
+}
+
+
+/* =========================================
+   Transformation Bootstrap Modal
+   Fit Image To Screen
+========================================= */
+
+#imageModal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 0 !important;
+
+  background: rgba(0, 0, 0, 0.90);
+
+  overflow: hidden !important;
+}
+
+
+/* Modal Dialog */
+
+#imageModal .modal-dialog {
+  position: relative;
+
+  width: 100vw;
+  max-width: 100vw;
+
+  height: 100vh;
+  max-height: 100vh;
+
+  margin: 0 !important;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Modal Content */
+
+#imageModal .modal-content {
   width: auto;
-  object-fit: contain;
+  max-width: 100%;
+
+  height: auto;
+  max-height: 100%;
+
+  margin: 0;
+
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+
+/* Modal Body */
+
+#imageModal .modal-body {
+  width: auto;
+  max-width: 100%;
+
+  height: auto;
+  max-height: 100%;
+
+  padding: 0 !important;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden !important;
+}
+
+
+/* =========================================
+   Modal Image
+========================================= */
+
+#modalImage {
+  display: block;
+
+  width: auto !important;
+  height: auto !important;
+
+  /* Keep image completely inside screen */
+  max-width: 85vw !important;
+  max-height: 80vh !important;
+
+  object-fit: contain !important;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.7);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   Prevent Page Scroll
+========================================= */
+
+body.modal-open {
+  overflow: hidden !important;
+  padding-right: 0 !important;
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 767px) {
+
+  #imageModal .modal-dialog {
+    padding: 15px;
+  }
+
+  #modalImage {
+    max-width: 88vw !important;
+    max-height: 75vh !important;
+
+    border-radius: 12px;
+  }
+}
+
+
+/* =========================================
+   Very Small Screens
+========================================= */
+
+@media (max-width: 480px) {
+
+  #imageModal .modal-dialog {
+    padding: 10px;
+  }
+
+  #modalImage {
+    max-width: 92vw !important;
+    max-height: 72vh !important;
+  }
+}
+
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width: 767.98px) {
+  .transformation-image {
+    height: 280px;
+    border-radius: 15px;
+  }
+
+  #modalImage {
+    max-width: 94vw;
+    max-height: 80vh;
+    border-radius: 12px;
+  }
+}
+
+
+/* =========================================================================
+   FIX: Certificates Lightbox Modal (#imageLightbox)
+   Same "fit to screen" treatment as #imageModal above, applied to the
+   certificates popup so its image never overflows the viewport.
+   ========================================================================= */
+
+#imageLightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 0 !important;
+
+  background: rgba(0, 0, 0, 0.90);
+
+  overflow: hidden !important;
+}
+
+#imageLightbox .modal-dialog {
+  position: relative;
+
+  width: 100vw;
+  max-width: 100vw;
+
+  height: 100vh;
+  max-height: 100vh;
+
+  margin: 0 !important;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#imageLightbox .modal-content {
+  width: auto;
+  max-width: 100%;
+
+  height: auto;
+  max-height: 100%;
+
+  margin: 0;
+
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#imageLightbox .modal-body {
+  width: auto;
+  max-width: 100%;
+
+  height: auto;
+  max-height: 100%;
+
+  padding: 0 !important;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden !important;
+}
+
+#lightboxImage {
+  display: block;
+
+  width: auto !important;
+  height: auto !important;
+
+  /* Keep image completely inside screen */
+  max-width: 85vw !important;
+  max-height: 80vh !important;
+
+  object-fit: contain !important;
+
+  border-radius: 15px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  #imageLightbox .modal-dialog {
+    padding: 15px;
+  }
+
+  #lightboxImage {
+    max-width: 88vw !important;
+    max-height: 75vh !important;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  #imageLightbox .modal-dialog {
+    padding: 10px;
+  }
+
+  #lightboxImage {
+    max-width: 92vw !important;
+    max-height: 72vh !important;
+  }
+}
+
+/* =========================================================================
+   How It Works / Process Section
+   ========================================================================= */
+.process-step-card {
+  background: var(--bg-glass);
+  transition: var(--transition);
+}
+
+.process-step-card:hover {
+  border-color: var(--primary) !important;
+  transform: translateY(-8px);
+  background: var(--bg-dark-1);
+  box-shadow: 0 15px 35px rgba(255, 111, 0, 0.12);
+}
+
+.process-step-number {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  line-height: 1;
+  opacity: 0.9;
+  -webkit-text-stroke: 1px var(--primary);
+}
+
+/* =========================================================================
+   Testimonials Section
+   ========================================================================= */
+.testimonial-card-new {
+  transition: var(--transition);
+}
+
+.testimonial-card-new:hover {
+  border-color: var(--primary) !important;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 111, 0, 0.12);
+}
+
+.testimonial-card-new p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.testimonial-stars {
+  color: var(--primary);
+  font-size: 1rem;
+  letter-spacing: 3px;
+}
+
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+/* =========================================================================
+   Floating WhatsApp Button
+   ========================================================================= */
+.whatsapp-float-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  transition: var(--transition);
+}
+
+.whatsapp-float-btn:hover {
+  transform: scale(1.08);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-float-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid #25d366;
+  animation: whatsapp-pulse 2.2s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes whatsapp-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .whatsapp-float-btn {
+    width: 52px;
+    height: 52px;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float-ring {
+    animation: none;
+  }
 }
