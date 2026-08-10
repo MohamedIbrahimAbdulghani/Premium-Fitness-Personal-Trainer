@@ -1,49 +1,40 @@
-/* ==========================================================================
-   CSS Design Tokens & Core Variables
-   ========================================================================== */
+/* ========================================================================== CSS Design Tokens & Core Variables ========================================================================== */
 :root {
   /* Core Colors - Premium Fitness Palette */
   --primary: #ff6f00;
-  /* Deep Neon Orange */
   --primary-glow: rgba(255, 111, 0, 0.4);
   --primary-soft: rgba(255, 111, 0, 0.15);
   --secondary: #1a1a1a;
-
   --bg-black: #050505;
   --bg-dark-1: #0a0a0a;
   --bg-dark-2: #111111;
-  --bg-glass: rgba(255, 255, 255, 0.03);
-  --bg-glass-hover: rgba(255, 255, 255, 0.06);
-
+  --bg-glass: rgba(255, 255, 255, 0.04);
+  --bg-glass-hover: rgba(255, 255, 255, 0.07);
+  /* Improved text contrast */
   --text-white: #ffffff;
-  --text-light: #e0e0e0;
-  --text-muted: #888888;
-  --text-dim: #555555;
-
+  --text-light: #eeeeee;
+  --text-muted: #b8b8b8;
+  --text-dim: #8f8f8f;
+  --text-secondary: #c8c8c8;
   /* Spacing & Borders */
-  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-glass: rgba(255, 255, 255, 0.1);
   --border-primary: rgba(255, 111, 0, 0.3);
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-full: 9999px;
-
   /* Typography */
   --font-primary: "Inter", sans-serif;
   --font-heading: "Outfit", sans-serif;
   --font-arabic: "Cairo", sans-serif;
-
   /* Transitions */
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-
   /* Sections */
   --section-padding: 100px;
 }
 
-/* ==========================================================================
-   Reset & Base Styles
-   ========================================================================== */
+/* ========================================================================== Reset & Base Styles ========================================================================== */
 * {
   box-sizing: border-box;
 }
@@ -76,7 +67,7 @@ body {
   font-family: var(--font-arabic);
 }
 
-/* Scrollbar */
+/* ========================================================================== Scrollbar ========================================================================== */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -86,7 +77,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #222;
+  background: #333;
   border-radius: var(--radius-full);
 }
 
@@ -94,15 +85,13 @@ body {
   background: var(--primary);
 }
 
-/* Selection */
+/* ========================================================================== Selection ========================================================================== */
 ::selection {
   background: var(--primary);
   color: #000;
 }
 
-/* ==========================================================================
-   Typography & Utilities
-   ========================================================================== */
+/* ========================================================================== Typography & Utilities ========================================================================== */
 h1,
 h2,
 h3,
@@ -113,6 +102,10 @@ h6 {
   font-weight: 900;
   color: var(--text-white);
   letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--text-light);
 }
 
 .fw-black {
@@ -155,7 +148,24 @@ h6 {
   font-style: italic;
 }
 
-/* بنضيف كلاس inset-0 لتغطية الكارت بالكامل */
+/* ========================================================================== Improved Bootstrap Text Contrast ========================================================================== */
+.text-muted {
+  color: #b8b8b8 !important;
+}
+
+.text-light {
+  color: #eeeeee !important;
+}
+
+.text-secondary-emphasis {
+  color: #c8c8c8 !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+/* ========================================================================== Inset Utility ========================================================================== */
 .inset-0 {
   top: 0;
   left: 0;
@@ -163,26 +173,47 @@ h6 {
   bottom: 0;
 }
 
-/* أيقونات الأوفرلاي في التحولات */
-.icon-box-m {
-  width: 48px;
-  height: 48px;
+/* ========================================================================== Site Icon Boxes ========================================================================== */
+.icon-box-m,
+.icon-box-l {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  background: var(--primary-soft);
+  border: 1px solid var(--border-primary);
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+.icon-box-m {
+  width: 48px;
+  height: 48px;
 }
 
 .icon-box-l {
   width: 64px;
   height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
 }
 
-/* Custom Bootstrap Colors */
+.icon-box-m svg,
+.icon-box-l svg {
+  stroke: currentColor;
+}
+
+.icon-box-m:hover,
+.icon-box-l:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #000;
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.hover-primary:hover {
+  color: var(--primary) !important;
+}
+
+/* ========================================================================== Custom Bootstrap Colors ========================================================================== */
 .text-primary {
   color: var(--primary) !important;
 }
@@ -228,9 +259,7 @@ h6 {
   color: var(--primary);
 }
 
-/* ==========================================================================
-   Glassmorphism & Shadows
-   ========================================================================== */
+/* ========================================================================== Glassmorphism & Shadows ========================================================================== */
 .glassmorphism {
   background: var(--bg-glass);
   backdrop-filter: blur(12px);
@@ -245,9 +274,7 @@ h6 {
   box-shadow: 0 0 30px rgba(255, 111, 0, 0.1);
 }
 
-/* ==========================================================================
-   Header & Navigation
-   ========================================================================== */
+/* ========================================================================== Header & Navigation ========================================================================== */
 .header {
   top: 0;
   z-index: 1000;
@@ -267,7 +294,7 @@ h6 {
 }
 
 .nav-link {
-  color: var(--text-light) !important;
+  color: #eeeeee !important;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -299,14 +326,24 @@ h6 {
   width: 20px;
 }
 
-/* ==========================================================================
-   Hero Section
-   ========================================================================== */
+/* ========================================================================== Language Toggle ========================================================================== */
+.lang-toggle-btn {
+  color: #eeeeee !important;
+}
+
+.lang-toggle-btn:hover {
+  color: var(--primary) !important;
+}
+
+.lang-label {
+  color: inherit;
+}
+
+/* ========================================================================== Hero Section ========================================================================== */
 .hero-section {
   padding-top: 120px;
 }
 
-/* هنا بنظبط سيكشن الهيرو عشان يملى الصفحة بالظبط على الديسكتوب من غير سكرول */
 @media (min-width: 992px) {
   .hero-section {
     height: 100vh;
@@ -378,13 +415,17 @@ h6 {
   display: inline-block;
 }
 
+.hero-section .lead {
+  color: #d0d0d0 !important;
+}
+
 .badge-premium {
   background: var(--primary-soft);
   border: 1px solid var(--border-primary);
   color: var(--primary);
 }
 
-/* Floating Card Animations */
+/* ========================================================================== Floating Card Animations ========================================================================== */
 .floating-card-new {
   position: absolute;
   z-index: 10;
@@ -482,9 +523,26 @@ h6 {
   }
 }
 
-/* ==========================================================================
-   About Section
-   ========================================================================== */
+.hero-scroll-btn {
+  color: #ffffff !important;
+  opacity: 0.8 !important;
+}
+
+.hero-scroll-btn:hover {
+  color: var(--primary) !important;
+  opacity: 1 !important;
+}
+
+/* ========================================================================== Stats ========================================================================== */
+.stat-mini p {
+  color: #bdbdbd !important;
+}
+
+.stat-mini h3 {
+  color: #ffffff !important;
+}
+
+/* ========================================================================== About Section ========================================================================== */
 .about-img-container {
   max-width: 400px;
   margin: auto;
@@ -507,18 +565,40 @@ h6 {
   filter: grayscale(0%);
 }
 
-/* ==========================================================================
-   Services
-   ========================================================================== */
+.about-text-content {
+  color: #d0d0d0 !important;
+  opacity: 1 !important;
+}
+
+.about-text-content p {
+  color: #d0d0d0 !important;
+}
+
+.about-text-content~.row p {
+  color: #bdbdbd !important;
+}
+
+/* ========================================================================== Services ========================================================================== */
+.service-card-new {
+  color: #eeeeee;
+}
+
+.service-card-new p {
+  color: #c8c8c8 !important;
+  line-height: 1.75;
+}
+
+.service-card-new h4 {
+  color: #ffffff !important;
+}
+
 .service-card-new:hover {
   background: var(--bg-dark-1);
   border-color: var(--primary) !important;
   transform: translateY(-10px);
 }
 
-/* ==========================================================================
-   Pricing
-   ========================================================================== */
+/* ========================================================================== Pricing ========================================================================== */
 .pricing-bg-glow {
   width: 800px;
   height: 800px;
@@ -539,15 +619,50 @@ h6 {
   transform: scale(1.05);
 }
 
+.price-card-new:not(.bg-primary) .text-secondary-emphasis {
+  color: #c8c8c8 !important;
+}
+
+.price-card-new:not(.bg-primary) .text-muted {
+  color: #b8b8b8 !important;
+}
+
+.price-card-new:not(.bg-primary) li {
+  color: #eeeeee !important;
+}
+
+.price-card-new.bg-primary h4,
+.price-card-new.bg-primary .display-3 {
+  color: #050505 !important;
+}
+
+.price-card-new.bg-primary p {
+  color: rgba(0, 0, 0, 0.78) !important;
+}
+
+.price-card-new.bg-primary li {
+  color: #050505 !important;
+}
+
+.price-card-new.bg-primary span {
+  color: #050505;
+}
+
+.price-card-new.bg-primary .text-black {
+  color: #050505 !important;
+}
+
+.price-card-new.bg-primary .text-opacity-75 {
+  opacity: 0.78 !important;
+}
+
 @media (max-width: 991px) {
   .price-card-new.bg-primary {
     transform: scale(1);
   }
 }
 
-/* ==========================================================================
-   FAQ & Accordion
-   ========================================================================== */
+/* ========================================================================== FAQ & Accordion ========================================================================== */
 .custom-accordion .accordion-item {
   background: var(--bg-glass);
 }
@@ -561,9 +676,7 @@ h6 {
   filter: invert(1);
 }
 
-/* ==========================================================================
-   Contact Form
-   ========================================================================== */
+/* ========================================================================== Contact Form ========================================================================== */
 .contact-glow {
   width: 500px;
   height: 500px;
@@ -574,138 +687,229 @@ h6 {
 }
 
 .glass-input {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff !important;
   padding: 12px 20px;
   border-radius: 12px;
   transition: var(--transition);
 }
 
 .glass-input:focus {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.09);
   border-color: var(--primary);
   box-shadow: 0 0 0 4px rgba(255, 111, 0, 0.1);
-  color: #fff;
+  color: #ffffff !important;
 }
 
 .glass-input::placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.55) !important;
+  opacity: 1;
 }
 
 select.glass-input option {
   background-color: var(--bg-dark-1);
+  color: #ffffff;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-.social-link:hover {
-  background-color: var(--primary);
-  border-color: var(--primary) !important;
-  color: #000;
-  transform: translateY(-3px);
+.form-label {
+  color: #ffffff !important;
 }
 
-.hover-primary:hover {
+#contact .lead.text-muted {
+  color: #c8c8c8 !important;
+}
+
+.contact-info-link {
+  color: #eeeeee;
+}
+
+.contact-info-link .text-muted {
+  color: #b8b8b8 !important;
+}
+
+.contact-info-link strong {
+  color: #ffffff !important;
+}
+
+.contact-info-link:hover strong {
   color: var(--primary) !important;
 }
 
-/* ==========================================================================
-   Animations (Reveal)
-   ========================================================================== */
-.reveal {
-  opacity: 0;
-  transition: var(--transition-slow);
+/* ========================================================================== Footer ========================================================================== */
+.site-footer {
+  background: var(--bg-black);
+  position: relative;
 }
 
-.reveal.fade-up {
-  transform: translateY(40px);
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  opacity: 0.6;
 }
 
-.reveal.fade-left {
-  transform: translateX(-40px);
+.site-footer .logo {
+  color: var(--text-white);
 }
 
-.reveal.fade-right {
-  transform: translateX(40px);
+.site-footer .logo .text-primary {
+  color: var(--primary) !important;
 }
 
-.reveal.zoom-in {
-  transform: scale(0.9);
+.site-footer .footer-heading {
+  color: var(--text-white);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.25rem;
 }
 
-.reveal.active {
-  opacity: 1 !important;
-  transform: translate(0) scale(1) !important;
-}
-
-/* ==========================================================================
-   Responsive Overrides
-   ========================================================================== */
-@media (max-width: 768px) {
-  :root {
-    --section-padding: 60px;
-  }
-
-  .display-1 {
-    font-size: 3.5rem;
-  }
-
-  .display-4 {
-    font-size: 2.5rem;
-  }
-
-  .py-section {
-    padding: 60px 0;
-  }
-
-  .hero-section {
-    padding-top: 80px;
-    text-align: center;
-  }
-}
-
-/* Transitions Utilities */
-.transition {
+/* ========================================================================== Footer Social Icons ========================================================================== */
+.site-footer .social-link {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  text-decoration: none;
+  background: var(--primary-soft);
+  border: 1px solid var(--border-primary);
   transition: var(--transition);
 }
 
-.transition-slow {
-  transition: var(--transition-slow);
+.site-footer .social-link svg {
+  color: currentColor;
+  stroke: currentColor;
 }
 
-/* Horizontal Overflow Prevention */
-body {
-  overflow-x: clip;
+.site-footer .social-link:hover {
+  background: var(--primary);
+  border-color: var(--primary) !important;
+  color: #000 !important;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px var(--primary-glow);
 }
 
-.row {
-  --bs-gutter-x: 1.5rem;
+.site-footer .social-link:hover svg {
+  color: #000 !important;
+  stroke: #000 !important;
 }
 
-@media (max-width: 390px) {
-  .navbar-brand {
-    font-size: 1.25rem !important;
+/* ========================================================================== Footer Navigation ========================================================================== */
+.site-footer .footer-nav-link {
+  color: #b8b8b8;
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.site-footer .footer-nav-link:hover {
+  color: var(--primary) !important;
+}
+
+/* ========================================================================== Footer Contact ========================================================================== */
+.site-footer .footer-contact-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #b8b8b8;
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 0.875rem;
+}
+
+.site-footer .footer-contact-link:hover {
+  color: var(--text-white) !important;
+}
+
+.site-footer .footer-contact-link:hover .footer-contact-icon {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #000;
+}
+
+.site-footer .footer-contact-icon {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--primary-soft);
+  border: 1px solid var(--border-primary);
+  border-radius: 50%;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+.site-footer .footer-contact-icon svg {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+}
+
+/* ========================================================================== Footer Bottom ========================================================================== */
+.site-footer .footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ========================================================================== Footer Responsive ========================================================================== */
+@media (max-width: 767.98px) {
+  .site-footer {
+    text-align: center;
+  }
+
+  .site-footer .footer-socials {
+    justify-content: center;
+  }
+
+  .site-footer .footer-contact-link {
+    justify-content: center;
   }
 }
 
-/* =========================================
-   Transformations - Image Gallery
-========================================= */
-
-.transformation-image {
-  height: 350px;
-  overflow: hidden;
-  border-radius: 20px;
-  cursor: pointer;
-  position: relative;
-  background: #111;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.35s ease;
+/* ========================================================================== Gallery Cards - Certificates & Transformations ========================================================================== */
+.group:hover .group-hover-opacity-100,
+.gallery-card:focus-visible .group-hover-opacity-100 {
+  opacity: 1 !important;
 }
 
-.transformation-image img {
+.group:hover .group-hover-scale,
+.gallery-card:focus-visible .group-hover-scale {
+  transform: scale(1.06);
+}
+
+.gallery-card,
+.certificate-card-new,
+.trans-gallery-card {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.gallery-card:hover,
+.certificate-card-new:hover,
+.trans-gallery-card:hover {
+  border-color: var(--border-primary) !important;
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(255, 111, 0, 0.14);
+}
+
+.gallery-img-box,
+.cert-img-box {
+  overflow: hidden;
+  background: var(--bg-dark-1);
+}
+
+.gallery-img-box img,
+.cert-img-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -713,298 +917,241 @@ body {
   transition: transform 0.5s ease;
 }
 
-.transformation-image:hover {
-  transform: translateY(-6px);
+.gallery-overlay,
+.cert-overlay-new {
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 2;
+}
+
+.gallery-action-icon {
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  border: 1px solid var(--border-primary);
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+.gallery-card:hover .gallery-action-icon,
+.certificate-card-new:hover .gallery-action-icon,
+.trans-gallery-card:hover .gallery-action-icon {
+  background: var(--primary);
   border-color: var(--primary);
-  box-shadow: 0 15px 35px rgba(255, 111, 0, 0.18);
+  color: #000;
+  box-shadow: 0 0 20px var(--primary-glow);
+  transform: scale(1.08);
 }
 
-.transformation-image:hover img {
-  transform: scale(1.06);
+.gallery-action-label {
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-primary);
+  background: rgba(0, 0, 0, 0.55);
 }
 
+.cert-info-box {
+  border-top: 1px solid var(--border-glass);
+}
 
-/* =========================================
-   Transformation Bootstrap Modal
-   Fit Image To Screen
-========================================= */
+.cert-info-box h4 {
+  color: #ffffff !important;
+}
 
-#imageModal {
+.cert-info-box p {
+  color: var(--primary) !important;
+}
+
+/* ========================================================================== Gallery Lightbox Modal ========================================================================== */
+.gallery-lightbox {
   position: fixed;
   inset: 0;
   z-index: 99999;
-
   width: 100vw;
   height: 100vh;
-
   padding: 0 !important;
-
-  background: rgba(0, 0, 0, 0.90);
-
+  background: rgba(0, 0, 0, 0.92);
   overflow: hidden !important;
 }
 
-
-/* Modal Dialog */
-
-#imageModal .modal-dialog {
+.gallery-lightbox .modal-dialog {
   position: relative;
-
   width: 100vw;
   max-width: 100vw;
-
   height: 100vh;
   max-height: 100vh;
-
   margin: 0 !important;
-  padding: 20px;
-
+  padding: 72px 20px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
-/* Modal Content */
-
-#imageModal .modal-content {
+.gallery-lightbox .modal-content {
   width: auto;
   max-width: 100%;
-
   height: auto;
   max-height: 100%;
-
   margin: 0;
-
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
+  position: relative;
 }
 
-
-/* Modal Body */
-
-#imageModal .modal-body {
+.gallery-lightbox .modal-body {
   width: auto;
   max-width: 100%;
-
   height: auto;
   max-height: 100%;
-
   padding: 0 !important;
   margin: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   overflow: hidden !important;
 }
 
-
-/* =========================================
-   Modal Image
-========================================= */
-
-#modalImage {
+.gallery-lightbox-img,
+#lightboxImage {
   display: block;
-
   width: auto !important;
   height: auto !important;
-
-  /* Keep image completely inside screen */
-  max-width: 85vw !important;
-  max-height: 80vh !important;
-
+  max-width: min(90vw, 1100px) !important;
+  max-height: 78vh !important;
   object-fit: contain !important;
-
-  border-radius: 15px;
-
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.7);
-
+  border-radius: var(--radius-md);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.75);
   margin: 0 auto;
 }
 
+/* ========================================================================== Custom Close Button ========================================================================== */
+.gallery-close-btn {
+  position: fixed;
+  top: 20px;
+  inset-inline-end: 20px;
+  z-index: 100001;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--border-primary);
+  border-radius: 50%;
+  background: rgba(5, 5, 5, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
 
-/* =========================================
-   Prevent Page Scroll
-========================================= */
+.gallery-close-btn svg {
+  stroke: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.gallery-close-btn:hover,
+.gallery-close-btn:focus-visible {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #000;
+  outline: none;
+  box-shadow: 0 0 24px var(--primary-glow);
+}
+
+.gallery-close-btn:hover svg,
+.gallery-close-btn:focus-visible svg {
+  transform: rotate(90deg);
+}
 
 body.modal-open {
   overflow: hidden !important;
   padding-right: 0 !important;
 }
 
-
-/* =========================================
-   Mobile
-========================================= */
-
+/* ========================================================================== Gallery Mobile ========================================================================== */
 @media (max-width: 767px) {
-
-  #imageModal .modal-dialog {
-    padding: 15px;
+  .gallery-lightbox .modal-dialog {
+    padding: 64px 14px 14px;
   }
 
-  #modalImage {
-    max-width: 88vw !important;
-    max-height: 75vh !important;
-
-    border-radius: 12px;
-  }
-}
-
-
-/* =========================================
-   Very Small Screens
-========================================= */
-
-@media (max-width: 480px) {
-
-  #imageModal .modal-dialog {
-    padding: 10px;
-  }
-
-  #modalImage {
-    max-width: 92vw !important;
-    max-height: 72vh !important;
-  }
-}
-
-
-/* =========================================
-   Responsive
-========================================= */
-
-@media (max-width: 767.98px) {
-  .transformation-image {
-    height: 280px;
-    border-radius: 15px;
-  }
-
-  #modalImage {
-    max-width: 94vw;
-    max-height: 80vh;
-    border-radius: 12px;
-  }
-}
-
-
-/* =========================================================================
-   FIX: Certificates Lightbox Modal (#imageLightbox)
-   Same "fit to screen" treatment as #imageModal above, applied to the
-   certificates popup so its image never overflows the viewport.
-   ========================================================================= */
-
-#imageLightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-
-  width: 100vw;
-  height: 100vh;
-
-  padding: 0 !important;
-
-  background: rgba(0, 0, 0, 0.90);
-
-  overflow: hidden !important;
-}
-
-#imageLightbox .modal-dialog {
-  position: relative;
-
-  width: 100vw;
-  max-width: 100vw;
-
-  height: 100vh;
-  max-height: 100vh;
-
-  margin: 0 !important;
-  padding: 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#imageLightbox .modal-content {
-  width: auto;
-  max-width: 100%;
-
-  height: auto;
-  max-height: 100%;
-
-  margin: 0;
-
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-
-#imageLightbox .modal-body {
-  width: auto;
-  max-width: 100%;
-
-  height: auto;
-  max-height: 100%;
-
-  padding: 0 !important;
-  margin: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden !important;
-}
-
-#lightboxImage {
-  display: block;
-
-  width: auto !important;
-  height: auto !important;
-
-  /* Keep image completely inside screen */
-  max-width: 85vw !important;
-  max-height: 80vh !important;
-
-  object-fit: contain !important;
-
-  border-radius: 15px;
-
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
-
-  margin: 0 auto;
-}
-
-@media (max-width: 767px) {
-  #imageLightbox .modal-dialog {
-    padding: 15px;
-  }
-
+  .gallery-lightbox-img,
   #lightboxImage {
-    max-width: 88vw !important;
-    max-height: 75vh !important;
+    max-width: 94vw !important;
+    max-height: 72vh !important;
     border-radius: 12px;
+  }
+
+  .gallery-close-btn {
+    top: 14px;
+    inset-inline-end: 14px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .gallery-action-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .gallery-action-label {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  #imageLightbox .modal-dialog {
-    padding: 10px;
-  }
 
+  .gallery-lightbox-img,
   #lightboxImage {
-    max-width: 92vw !important;
-    max-height: 72vh !important;
+    max-height: 68vh !important;
   }
 }
 
-/* =========================================================================
-   How It Works / Process Section
-   ========================================================================= */
+@media (hover: none) {
+
+  .gallery-card .gallery-overlay,
+  .certificate-card-new .gallery-overlay,
+  .trans-gallery-card .gallery-overlay {
+    opacity: 0.92;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.25) 55%, transparent 100%);
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+  }
+
+  .gallery-card .gallery-action-icon,
+  .certificate-card-new .gallery-action-icon,
+  .trans-gallery-card .gallery-action-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #000;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .gallery-close-btn:hover svg,
+  .gallery-close-btn:focus-visible svg {
+    transform: none;
+  }
+}
+
+/* ========================================================================== How It Works / Process Section ========================================================================== */
 .process-step-card {
   background: var(--bg-glass);
   transition: var(--transition);
@@ -1025,9 +1172,16 @@ body.modal-open {
   -webkit-text-stroke: 1px var(--primary);
 }
 
-/* =========================================================================
-   Testimonials Section
-   ========================================================================= */
+.process-step-card p {
+  color: #c4c4c4 !important;
+  line-height: 1.7;
+}
+
+.process-step-card h4 {
+  color: #ffffff !important;
+}
+
+/* ========================================================================== Testimonials Section ========================================================================== */
 .testimonial-card-new {
   transition: var(--transition);
 }
@@ -1041,6 +1195,7 @@ body.modal-open {
 .testimonial-card-new p {
   font-size: 0.95rem;
   line-height: 1.7;
+  color: #eeeeee !important;
 }
 
 .testimonial-stars {
@@ -1056,9 +1211,15 @@ body.modal-open {
   font-size: 1rem;
 }
 
-/* =========================================================================
-   Floating WhatsApp Button
-   ========================================================================= */
+.testimonial-card-new strong {
+  color: #ffffff !important;
+}
+
+.testimonial-card-new .text-muted {
+  color: #b8b8b8 !important;
+}
+
+/* ========================================================================== Floating WhatsApp Button ========================================================================== */
 .whatsapp-float-btn {
   position: fixed;
   bottom: 24px;
@@ -1112,9 +1273,181 @@ body.modal-open {
   }
 }
 
-/* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   .whatsapp-float-ring {
     animation: none;
+  }
+}
+
+/* ========================================================================== Animations - Reveal ========================================================================== */
+.reveal {
+  opacity: 0;
+  transition: var(--transition-slow);
+}
+
+.reveal.fade-up {
+  transform: translateY(40px);
+}
+
+.reveal.fade-left {
+  transform: translateX(-40px);
+}
+
+.reveal.fade-right {
+  transform: translateX(40px);
+}
+
+.reveal.zoom-in {
+  transform: scale(0.9);
+}
+
+.reveal.active {
+  opacity: 1 !important;
+  transform: translate(0) scale(1) !important;
+}
+
+/* ========================================================================== Responsive Overrides ========================================================================== */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px;
+  }
+
+  .display-1 {
+    font-size: 3.5rem;
+  }
+
+  .display-4 {
+    font-size: 2.5rem;
+  }
+
+  .display-5 {
+    font-size: 2rem;
+  }
+
+  .py-section {
+    padding: 60px 0;
+  }
+
+  .hero-section {
+    padding-top: 80px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 48px;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .py-section {
+    padding: 48px 0;
+  }
+}
+
+/* ========================================================================== Transitions Utilities ========================================================================== */
+.transition {
+  transition: var(--transition);
+}
+
+.transition-slow {
+  transition: var(--transition-slow);
+}
+
+/* ========================================================================== Horizontal Overflow Prevention ========================================================================== */
+body {
+  overflow-x: clip;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+}
+
+@media (max-width: 390px) {
+  .navbar-brand {
+    font-size: 1.25rem !important;
+  }
+}
+
+/* ========================================================================== Additional Text Visibility Fixes ========================================================================== */
+/* Any muted text inside dark sections */
+.bg-darker-1 .text-muted,
+.bg-darker-2 .text-muted,
+.bg-black .text-muted {
+  color: #b8b8b8 !important;
+}
+
+/* All normal paragraphs inside cards */
+.glassmorphism p {
+  color: #c8c8c8;
+}
+
+/* Keep headings bright */
+.glassmorphism h1,
+.glassmorphism h2,
+.glassmorphism h3,
+.glassmorphism h4,
+.glassmorphism h5,
+.glassmorphism h6 {
+  color: #ffffff;
+}
+
+/* Improve readability of labels */
+label,
+.form-label {
+  color: #ffffff !important;
+}
+
+/* Improve input/select text */
+input,
+textarea,
+select {
+  color: #ffffff;
+}
+
+/* Disabled/select placeholder */
+select.glass-input option:disabled {
+  color: #999999;
+}
+
+/* Improve footer paragraph readability */
+.site-footer p {
+  color: #b8b8b8;
+}
+
+/* Improve generic small descriptions */
+.card p.small,
+.card .small,
+section p.small {
+  color: #bdbdbd;
+}
+
+/* ========================================================================== Mobile Text Visibility ========================================================================== */
+@media (max-width: 767.98px) {
+  .hero-section .lead {
+    color: #d5d5d5 !important;
+  }
+
+  .about-text-content p,
+  .process-step-card p,
+  .service-card-new p,
+  .testimonial-card-new p {
+    color: #cfcfcf !important;
+  }
+
+  .text-muted {
+    color: #b8b8b8 !important;
+  }
+
+  .text-secondary-emphasis {
+    color: #c8c8c8 !important;
+  }
+
+  .site-footer .footer-nav-link,
+  .site-footer .footer-contact-link {
+    color: #bdbdbd;
   }
 }
