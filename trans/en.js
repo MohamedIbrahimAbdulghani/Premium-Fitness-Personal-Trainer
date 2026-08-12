@@ -64,6 +64,17 @@ const en = {
     step_4_title: "Weekly Check-Ins",
     step_4_desc: "Direct check-ins, form reviews, and plan adjustments every week until you hit the number you came for.",
 
+    // ---- ID CARDS ----
+    idcards_tagline: "Official Membership Cards",
+    idcards_title: "Trainer ID Cards",
+    alt_idcard: "Coach Mahmoud Hamada official trainer ID card",
+    idcard_1_title: "Nutrition for Sports – ID Card",
+    idcard_1_issuer: "Olympic Academy for Sports Leaders",
+    idcard_2_title: "Certified Fitness Trainer (CFT) – ID Card",
+    idcard_2_issuer: "Olympic Academy for Sports Leaders",
+    idcard_3_title: "Certified Fitness Trainer – Membership Card",
+    idcard_3_issuer: "PRO FTT Academy for Sports Facilities & Rehabilitation",
+
     // ---- CERTIFICATES ----
     cert_tagline: "Academic & Professional Background",
     cert_title: "Credentials & Certifications",
