@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-black text-light">
+<body class="transition">
 
     <!-- Header Navigation -->
     <header class="header sticky-top transition" id="header">
@@ -43,6 +43,29 @@
                 <a class="navbar-brand fw-black fs-3 logo" href="#" data-i18n="nav_logo"></a>
 
                 <div class="d-flex align-items-center order-lg-3 gap-3">
+                    <!-- Theme Toggle Button -->
+                    <button class="btn btn-outline-light theme-toggle-btn d-flex align-items-center justify-content-center p-2 border-0 rounded-circle"
+                        id="themeToggleBtn" aria-label="Toggle Dark/Light Mode" style="width: 40px; height: 40px;">
+                        <!-- Sun Icon (hidden in dark mode) -->
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <!-- Moon Icon (visible in dark mode) -->
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+
                     <!-- Language Toggle Button -->
                     <button class="btn btn-outline-light lang-toggle-btn d-flex align-items-center gap-2 border-0"
                         id="langToggleBtn" aria-label="Switch to Arabic">
@@ -701,8 +724,10 @@
                         Proof </span>
                     <h2 class="display-5 fw-black text-white mt-2" data-i18n="transformations_title"> Success Stories
                     </h2>
-                </div> <!-- Transformations Grid -->
-                <div class="row g-4 justify-content-center"> <!-- 1 -->
+                </div>
+                <!-- Transformations Grid -->
+                <div class="row g-4 justify-content-center">
+                    <!-- 1 -->
                     <div class="col-md-5 col-lg-4">
                         <div class="trans-gallery-card gallery-card glassmorphism rounded-4 overflow-hidden border border-white border-opacity-10 position-relative group reveal zoom-in cursor-pointer"
                             data-delay="100" data-bs-toggle="modal" data-bs-target="#imageModal"
@@ -723,7 +748,8 @@
                                 </span>
                             </div>
                         </div>
-                    </div> <!-- 2 -->
+                    </div>
+                    <!-- 2 -->
                     <div class="col-md-5 col-lg-4">
                         <div class="trans-gallery-card gallery-card glassmorphism rounded-4 overflow-hidden border border-white border-opacity-10 position-relative group reveal zoom-in cursor-pointer"
                             data-delay="150" data-bs-toggle="modal" data-bs-target="#imageModal"
@@ -933,12 +959,101 @@
                                 </span>
                             </div>
                         </div>
-                    </div> <!-- 12 -->
+                    </div>
+                    <!-- 12 -->
                     <div class="col-md-5 col-lg-4">
                         <div class="trans-gallery-card gallery-card glassmorphism rounded-4 overflow-hidden border border-white border-opacity-10 position-relative group reveal zoom-in cursor-pointer"
                             data-delay="650" data-bs-toggle="modal" data-bs-target="#imageModal"
                             data-image="assets/images/transformation/12.jpg">
                             <div class="gallery-img-box ratio ratio-4x3"> <img src="assets/images/transformation/12.jpg"
+                                    alt="Transformation 12" class="object-fit-cover transition-slow group-hover-scale"
+                                    data-i18n-alt="alt_trans"> </div>
+                            <div
+                                class="gallery-overlay position-absolute inset-0 d-flex flex-column align-items-center justify-content-center gap-3 opacity-0 transition group-hover-opacity-100">
+                                <span class="gallery-action-icon" aria-hidden="true"> <svg width="22" height="22"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <polyline points="9 21 3 21 3 15"></polyline>
+                                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                                    </svg> </span> <span class="gallery-action-label" data-i18n="cert_expand"> Expand
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 13 -->
+                    <div class="col-md-5 col-lg-4">
+                        <div class="trans-gallery-card gallery-card glassmorphism rounded-4 overflow-hidden border border-white border-opacity-10 position-relative group reveal zoom-in cursor-pointer"
+                            data-delay="650" data-bs-toggle="modal" data-bs-target="#imageModal"
+                            data-image="assets/images/transformation/13.jpg">
+                            <div class="gallery-img-box ratio ratio-4x3"> <img src="assets/images/transformation/13.jpg"
+                                    alt="Transformation 12" class="object-fit-cover transition-slow group-hover-scale"
+                                    data-i18n-alt="alt_trans"> </div>
+                            <div
+                                class="gallery-overlay position-absolute inset-0 d-flex flex-column align-items-center justify-content-center gap-3 opacity-0 transition group-hover-opacity-100">
+                                <span class="gallery-action-icon" aria-hidden="true"> <svg width="22" height="22"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <polyline points="9 21 3 21 3 15"></polyline>
+                                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                                    </svg> </span> <span class="gallery-action-label" data-i18n="cert_expand"> Expand
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 14 -->
+                    <div class="col-md-5 col-lg-4">
+                        <div class="trans-gallery-card gallery-card glassmorphism rounded-4 overflow-hidden border border-white border-opacity-10 position-relative group reveal zoom-in cursor-pointer"
+                            data-delay="650" data-bs-toggle="modal" data-bs-target="#imageModal"
+                            data-image="assets/images/transformation/14.jpg">
+                            <div class="gallery-img-box ratio ratio-4x3"> <img src="assets/images/transformation/14.jpg"
+                                    alt="Transformation 14" class="object-fit-cover transition-slow group-hover-scale"
+                                    data-i18n-alt="alt_trans"> </div>
+                            <div
+                                class="gallery-overlay position-absolute inset-0 d-flex flex-column align-items-center justify-content-center gap-3 opacity-0 transition group-hover-opacity-100">
+                                <span class="gallery-action-icon" aria-hidden="true"> <svg width="22" height="22"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <polyline points="9 21 3 21 3 15"></polyline>
+                                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                                    </svg> </span> <span class="gallery-action-label" data-i18n="cert_expand"> Expand
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 15 -->
+                    <div class="col-md-5 col-lg-4">
+                        <div class="trans-gallery-card gallery-card glassmorphism rounded-4 overflow-hidden border border-white border-opacity-10 position-relative group reveal zoom-in cursor-pointer"
+                            data-delay="650" data-bs-toggle="modal" data-bs-target="#imageModal"
+                            data-image="assets/images/transformation/15.jpg">
+                            <div class="gallery-img-box ratio ratio-4x3"> <img src="assets/images/transformation/15.jpg"
+                                    alt="Transformation 12" class="object-fit-cover transition-slow group-hover-scale"
+                                    data-i18n-alt="alt_trans"> </div>
+                            <div
+                                class="gallery-overlay position-absolute inset-0 d-flex flex-column align-items-center justify-content-center gap-3 opacity-0 transition group-hover-opacity-100">
+                                <span class="gallery-action-icon" aria-hidden="true"> <svg width="22" height="22"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <polyline points="9 21 3 21 3 15"></polyline>
+                                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                                    </svg> </span> <span class="gallery-action-label" data-i18n="cert_expand"> Expand
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 16 -->
+                    <div class="col-md-5 col-lg-4">
+                        <div class="trans-gallery-card gallery-card glassmorphism rounded-4 overflow-hidden border border-white border-opacity-10 position-relative group reveal zoom-in cursor-pointer"
+                            data-delay="650" data-bs-toggle="modal" data-bs-target="#imageModal"
+                            data-image="assets/images/transformation/16.jpg">
+                            <div class="gallery-img-box ratio ratio-4x3"> <img src="assets/images/transformation/16.jpg"
                                     alt="Transformation 12" class="object-fit-cover transition-slow group-hover-scale"
                                     data-i18n-alt="alt_trans"> </div>
                             <div

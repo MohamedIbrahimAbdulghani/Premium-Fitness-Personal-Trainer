@@ -32,6 +32,33 @@
   --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   /* Sections */
   --section-padding: 100px;
+  /* Header & Forms */
+  --header-bg: rgba(0, 0, 0, 0.8);
+  --bg-glass-input: rgba(255, 255, 255, 0.07);
+  --bg-glass-input-focus: rgba(255, 255, 255, 0.09);
+  --border-glass-input: rgba(255, 255, 255, 0.15);
+  --text-placeholder: rgba(255, 255, 255, 0.55);
+}
+
+[data-theme="light"] {
+  --secondary: #f0f0f0;
+  --bg-black: #ffffff;
+  --bg-dark-1: #f8f9fa;
+  --bg-dark-2: #e9ecef;
+  --bg-glass: rgba(0, 0, 0, 0.03);
+  --bg-glass-hover: rgba(0, 0, 0, 0.06);
+  --text-white: #0a0a0a;
+  --text-light: #222222;
+  --text-muted: #6c757d;
+  --text-dim: #555555;
+  --text-secondary: #333333;
+  --border-glass: rgba(0, 0, 0, 0.08);
+  --border-primary: rgba(255, 111, 0, 0.2);
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --bg-glass-input: rgba(0, 0, 0, 0.04);
+  --bg-glass-input-focus: rgba(0, 0, 0, 0.06);
+  --border-glass-input: rgba(0, 0, 0, 0.12);
+  --text-placeholder: rgba(0, 0, 0, 0.45);
 }
 
 /* ========================================================================== Reset & Base Styles ========================================================================== */
@@ -150,19 +177,19 @@ p {
 
 /* ========================================================================== Improved Bootstrap Text Contrast ========================================================================== */
 .text-muted {
-  color: #b8b8b8 !important;
+  color: var(--text-muted) !important;
 }
 
 .text-light {
-  color: #eeeeee !important;
+  color: var(--text-light) !important;
 }
 
 .text-secondary-emphasis {
-  color: #c8c8c8 !important;
+  color: var(--text-secondary) !important;
 }
 
 .text-white {
-  color: #ffffff !important;
+  color: var(--text-white) !important;
 }
 
 /* ========================================================================== Inset Utility ========================================================================== */
@@ -282,11 +309,15 @@ p {
 }
 
 .header.scrolled {
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--header-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-glass);
   padding: 5px 0;
+}
+
+.logo {
+  color: var(--text-white) !important;
 }
 
 .logo span {
@@ -294,7 +325,7 @@ p {
 }
 
 .nav-link {
-  color: #eeeeee !important;
+  color: var(--text-light) !important;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -327,11 +358,11 @@ p {
 }
 
 /* ========================================================================== Language Toggle ========================================================================== */
-.lang-toggle-btn {
-  color: #eeeeee !important;
+.lang-toggle-btn, .theme-toggle-btn {
+  color: var(--text-light) !important;
 }
 
-.lang-toggle-btn:hover {
+.lang-toggle-btn:hover, .theme-toggle-btn:hover {
   color: var(--primary) !important;
 }
 
@@ -524,7 +555,7 @@ p {
 }
 
 .hero-scroll-btn {
-  color: #ffffff !important;
+  color: var(--text-white) !important;
   opacity: 0.8 !important;
 }
 
@@ -535,11 +566,11 @@ p {
 
 /* ========================================================================== Stats ========================================================================== */
 .stat-mini p {
-  color: #bdbdbd !important;
+  color: var(--text-muted) !important;
 }
 
 .stat-mini h3 {
-  color: #ffffff !important;
+  color: var(--text-white) !important;
 }
 
 /* ========================================================================== About Section ========================================================================== */
@@ -580,16 +611,16 @@ p {
 
 /* ========================================================================== Services ========================================================================== */
 .service-card-new {
-  color: #eeeeee;
+  color: var(--text-light);
 }
 
 .service-card-new p {
-  color: #c8c8c8 !important;
+  color: var(--text-secondary) !important;
   line-height: 1.75;
 }
 
 .service-card-new h4 {
-  color: #ffffff !important;
+  color: var(--text-white) !important;
 }
 
 .service-card-new:hover {
@@ -620,15 +651,15 @@ p {
 }
 
 .price-card-new:not(.bg-primary) .text-secondary-emphasis {
-  color: #c8c8c8 !important;
+  color: var(--text-secondary) !important;
 }
 
 .price-card-new:not(.bg-primary) .text-muted {
-  color: #b8b8b8 !important;
+  color: var(--text-muted) !important;
 }
 
 .price-card-new:not(.bg-primary) li {
-  color: #eeeeee !important;
+  color: var(--text-light) !important;
 }
 
 .price-card-new.bg-primary h4,
@@ -687,37 +718,37 @@ p {
 }
 
 .glass-input {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #ffffff !important;
+  background: var(--bg-glass-input);
+  border: 1px solid var(--border-glass-input);
+  color: var(--text-white) !important;
   padding: 12px 20px;
   border-radius: 12px;
   transition: var(--transition);
 }
 
 .glass-input:focus {
-  background: rgba(255, 255, 255, 0.09);
+  background: var(--bg-glass-input-focus);
   border-color: var(--primary);
   box-shadow: 0 0 0 4px rgba(255, 111, 0, 0.1);
-  color: #ffffff !important;
+  color: var(--text-white) !important;
 }
 
 .glass-input::placeholder {
-  color: rgba(255, 255, 255, 0.55) !important;
+  color: var(--text-placeholder) !important;
   opacity: 1;
 }
 
 select.glass-input option {
   background-color: var(--bg-dark-1);
-  color: #ffffff;
+  color: var(--text-white);
 }
 
 .form-label {
-  color: #ffffff !important;
+  color: var(--text-white) !important;
 }
 
 #contact .lead.text-muted {
-  color: #c8c8c8 !important;
+  color: var(--text-muted) !important;
 }
 
 .contact-info-link {
@@ -725,11 +756,11 @@ select.glass-input option {
 }
 
 .contact-info-link .text-muted {
-  color: #b8b8b8 !important;
+  color: var(--text-muted) !important;
 }
 
 .contact-info-link strong {
-  color: #ffffff !important;
+  color: var(--text-white) !important;
 }
 
 .contact-info-link:hover strong {
@@ -965,7 +996,7 @@ select.glass-input option {
 }
 
 .cert-info-box h4 {
-  color: #ffffff !important;
+  color: var(--text-white) !important;
 }
 
 .cert-info-box p {
@@ -1173,12 +1204,12 @@ body.modal-open {
 }
 
 .process-step-card p {
-  color: #c4c4c4 !important;
+  color: var(--text-secondary) !important;
   line-height: 1.7;
 }
 
 .process-step-card h4 {
-  color: #ffffff !important;
+  color: var(--text-white) !important;
 }
 
 /* ========================================================================== Testimonials Section ========================================================================== */
@@ -1195,7 +1226,7 @@ body.modal-open {
 .testimonial-card-new p {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: #eeeeee !important;
+  color: var(--text-light) !important;
 }
 
 .testimonial-stars {
@@ -1212,11 +1243,11 @@ body.modal-open {
 }
 
 .testimonial-card-new strong {
-  color: #ffffff !important;
+  color: var(--text-white) !important;
 }
 
 .testimonial-card-new .text-muted {
-  color: #b8b8b8 !important;
+  color: var(--text-muted) !important;
 }
 
 /* ========================================================================== Floating WhatsApp Button ========================================================================== */
@@ -1382,7 +1413,7 @@ body {
 
 /* All normal paragraphs inside cards */
 .glassmorphism p {
-  color: #c8c8c8;
+  color: var(--text-secondary);
 }
 
 /* Keep headings bright */
@@ -1392,30 +1423,63 @@ body {
 .glassmorphism h4,
 .glassmorphism h5,
 .glassmorphism h6 {
-  color: #ffffff;
+  color: var(--text-white);
 }
 
 /* Improve readability of labels */
 label,
 .form-label {
-  color: #ffffff !important;
+  color: var(--text-white) !important;
 }
 
 /* Improve input/select text */
 input,
 textarea,
 select {
-  color: #ffffff;
+  color: var(--text-white);
 }
 
 /* Disabled/select placeholder */
 select.glass-input option:disabled {
-  color: #999999;
+  color: var(--text-muted);
 }
 
 /* Improve footer paragraph readability */
 .site-footer p {
-  color: #b8b8b8;
+  color: var(--text-muted);
+}
+
+/* ========================================================================== Theme Overrides ========================================================================== */
+
+/* Override Bootstrap's bg-black in light mode to respect our dynamic background */
+[data-theme="light"] .bg-black {
+  background-color: var(--bg-black) !important;
+}
+
+/* Override white borders in light mode */
+[data-theme="light"] .border-white {
+  border-color: var(--border-glass) !important;
+}
+
+/* Update accordion arrow in light mode */
+[data-theme="light"] .custom-accordion .accordion-button::after {
+  filter: none;
+}
+
+/* Add border to glassmorphism globally so it uses var */
+.glassmorphism, .price-card-new, .testimonial-card-new, .process-step-card {
+  border: 1px solid var(--border-glass) !important;
+}
+
+/* Ensure hr separators inside cards adapt */
+.glassmorphism hr, .price-card-new hr {
+  border-color: var(--border-glass) !important;
+  opacity: 1 !important;
+}
+
+/* Make navbar toggler dark in light mode */
+[data-theme="light"] .navbar-toggler-icon {
+  filter: invert(1);
 }
 
 /* Improve generic small descriptions */

@@ -243,4 +243,41 @@ I am ready to start my journey with Coach Mahmoud!`;
     window.addEventListener('scroll', handleActiveLink);
     handleActiveLink();
 
+    /* ==========================================================================
+       8. Theme Toggle (Light/Dark Mode)
+       ========================================================================== */
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.querySelector('.moon-icon');
+
+    const THEME_STORAGE_KEY = 'coach_theme';
+    let currentTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'dark';
+
+    const applyTheme = (theme) => {
+        if (theme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            if (sunIcon && moonIcon) {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            }
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            if (sunIcon && moonIcon) {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            }
+        }
+        localStorage.setItem(THEME_STORAGE_KEY, theme);
+    };
+
+    // Initialize Theme
+    applyTheme(currentTheme);
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+            applyTheme(currentTheme);
+        });
+    }
+
 });
